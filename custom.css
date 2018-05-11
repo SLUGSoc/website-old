@@ -1,0 +1,37 @@
+.btn {
+  transform: skewX(-25deg) translateY(1px);
+  border-radius: 0;
+  border: 0;
+  border-left: 10px solid red;
+}
+
+.btn span {
+    transform: skewX(25deg);
+    display: inline-block;
+    font-family: $headings-font-family;
+}
+
+div.carousel-caption {
+  text-shadow: 2px 2px 5px gray;
+}
+
+.btn {
+  .expand-text {
+    width:0;
+    overflow:hidden;
+    margin-right:0;
+    transition:width .2s, margin .2s;
+    font-family: $font-family-sans-serif;
+    transform: skewX(0deg);
+  }
+  i, .expand-text {
+    display:inline-block;
+    vertical-align:middle;
+  }
+  &:hover {
+    .expand-text {
+      margin-right:0;
+      width:125px;
+    }
+  }
+}
