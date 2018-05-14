@@ -1,0 +1,57 @@
+$font-size-base: 1.2rem;
+@font-face {
+    font-family: Bebas;
+    src: url("/assets/bebas_neue/BebasNeue Bold.ttf")
+}
+$theme-colors: (
+  "primary": #3D3D3D,
+  "discord": #7289DA,
+  "facebook": #3b5998,
+  "twitter": #00aced,
+);
+@import "../node_modules/bootstrap/scss/variables";
+
+$headings-font-family: 'Bebas', $font-family-sans-serif;
+.navbar-brand {
+    font-family: $headings-font-family;
+}
+
+.btn {
+  transform: skewX(-25deg) translateY(1px);
+  border-radius: 0;
+  border: 0;
+  border-left: 10px solid darken($primary, 20%);
+  border-radius: 0.3em;
+  font-size: 1.2rem;
+}
+
+.btn span {
+    transform: skewX(25deg);
+    display: inline-block;
+    font-family: $headings-font-family;
+}
+
+div.carousel-caption {
+  text-shadow: 2px 2px 5px gray;
+}
+
+.btn {
+  .expand-text {
+    width:0;
+    overflow:hidden;
+    margin-right:0;
+    transition:width .2s, margin .2s;
+    font-family: $font-family-sans-serif;
+    transform: skewX(0deg);
+  }
+  i, .expand-text {
+    display:inline-block;
+    vertical-align:middle;
+  }
+  &:hover {
+    .expand-text {
+      margin-right:0;
+      width:125px;
+    }
+  }
+}
