@@ -29,15 +29,22 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
+sass:
+    load_paths:
+        - _sass
+        - node_modules
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
+# We need node_modules, so exclude none!
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
 #   - Gemfile
 #   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
+  - node_modules
+  - vendor/bundler/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
