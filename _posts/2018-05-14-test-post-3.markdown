@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Announcing LAN 70!"
+summary: LAN 70's happening - be there or be square!
+prompt: Let's go!
+image: https://placehold.it/800x500
+image_description: Another placeholder image
+categories: jekyll update lan
+---
+
+Oh, hi Mark.

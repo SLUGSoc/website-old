@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Test Post 2"
+summary: Here's another test post for you!
+prompt: Test Prompt
+image: https://placehold.it/800x500
+image_description: Another placeholder image
+categories: jekyll update
+---
+
+Oh, hi Mark.

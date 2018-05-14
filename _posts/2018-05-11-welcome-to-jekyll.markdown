@@ -1,7 +1,11 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
+summary: Test post!
 date:   2018-05-11 09:55:53 +0100
+image:  https://placehold.it/800x500
+image_description: Placeholder image
+prompt: Test Prompt
 categories: jekyll update
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
