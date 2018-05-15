@@ -41,7 +41,7 @@ div.carousel-caption {
     overflow:hidden;
     margin-right:0;
     transition:width .2s, margin .2s;
-    font-family: $font-family-sans-serif;
+    // font-family: $font-family-sans-serif;
     transform: skewX(0deg);
   }
   i, .expand-text {
@@ -51,7 +51,7 @@ div.carousel-caption {
   &:hover {
     .expand-text {
       margin-right:0;
-      width:125px;
+      width:70px;
     }
   }
 }
