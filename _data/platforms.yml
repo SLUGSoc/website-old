@@ -1,0 +1,17 @@
+- name: Nintendo Switch
+  color: nintendo-switch
+  icon: nintendo-switch
+- name: Wii U
+  color: wii-u
+- name: Xbox 360
+  color: xbox-360
+  icon: xbox
+- name: Xbox One
+  color: xbox-one
+  icon: xbox
+- name: PlayStation 4
+  color: playstation-4
+  icon: playstation
+- name: PlayStation 3
+  color: playstation-4
+  icon: playstation

@@ -1,46 +1,86 @@
 ---
 layout: default
 ---
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    {% for post in site.posts %}
-    <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active">{% endif %}</li>
-    {% endfor %}
-  </ol>
-  <div class="carousel-inner">
-    {% for post in site.posts %}
-    <div class="carousel-item {% if forloop.first %} active {% endif %}">
-      <img src="{{ post.image }}" alt="{{ post.image_description}}">
-      <div class="container">
-        <div class="carousel-caption text-left">
-          <h1>{{ post.title }}</h1>
-          <p>{{ post.summary }}</p>
-          <p>
-          <a class="btn btn-lg btn-primary" href="{{ post.url }}" role="button">
+<section class="snap-point">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {% for post in site.posts %}
+      <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active">{% endif %}</li>
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+      {% for post in site.posts %}
+      <div class="carousel-item {% if forloop.first %} active {% endif %}">
+        <img src="{{ post.image }}" alt="{{ post.image_description}}">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.summary }}</p>
+            <p>
+            <a class="btn btn-lg btn-primary" href="{{ post.url }}" role="button">
               <span>
                 {% if post.prompt %}
-                  {{ post.prompt }}
+                {{ post.prompt }}
                 {% else %}
-                  Learn more
+                Learn more
                 {% endif %}
                 <!-- <span class="expand-text">No, really</span> -->
               </span>
             </a>
-          </p>
+            </p>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+</section>
+
+<section id="summary" class="snap-point">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
+        <h2>Socials</h2>
+        <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
+        <p>
+        <a class="btn btn-secondary w-100" href="#" role="button">
+          <span>View details &raquo;</span>
+        </a>
+        </p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
+        <h2>LAN events</h2>
+        <p>Once every few weeks, we run LAN events at the Ridge building in Ranmoor Student Village. They're an excellent opportunity to engage with the groups you play games with. If you've not yet been to a LAN and would like to learn more, head this way!</p>
+        <p>
+        <a class="btn btn-secondary w-100" href="#" role="button">
+          <span>View details &raquo;</span>
+        </a>
+        </p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
+        <h2>Competitive</h2>
+        <p>For the ranked players among you, we engage with the <abbr title="National University Esports League">NUEL</abbr> every year in games like CS:GO, League of Legends, and Rocket League. Take the fight to other universities and wave that black and gold banner!</p>
+        <p>
+        <a class="btn btn-secondary w-100" href="#" role="button">
+          <span>View details &raquo;</span>
+        </a>
+        </p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Marketing messaging and featurettes
@@ -50,38 +90,7 @@ layout: default
   <div class="container marketing mt-5">
 
     <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>Socials</h2>
-        <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
-<p>
-          <a class="btn btn-secondary w-100" href="#" role="button">
-            <span>View details &raquo;</span>
-          </a>
-        </p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>LAN events</h2>
-        <p>Once every few weeks, we run LAN events at the Ridge building in Ranmoor Student Village. They're an excellent opportunity to engage with the groups you play games with. If you've not yet been to a LAN and would like to learn more, head this way!</p>
-        <p>
-          <a class="btn btn-secondary w-100" href="#" role="button">
-            <span>View details &raquo;</span>
-          </a>
-        </p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>Competitive</h2>
-        <p>For the ranked players among you, we engage with the <abbr title="National University Esports League">NUEL</abbr> every year in games like CS:GO, League of Legends, and Rocket League. Take the fight to other universities and wave that black and gold banner!</p>
-        <p>
-          <a class="btn btn-secondary w-100" href="#" role="button">
-            <span>View details &raquo;</span>
-          </a>
-        </p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+    <!-- /.row -->
 
 
     <!-- START THE FEATURETTES -->

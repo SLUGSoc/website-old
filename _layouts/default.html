@@ -33,13 +33,13 @@
           <ul class="navbar-nav ml-auto text-center">
             <form class="form-inline mr-3">
               <div class="btn-group mx-auto">
-                <a class="btn btn-discord" href="#">
+                <a class="btn btn-discord" href="https://discord.gg/{{ site.discord_invite_link }}">
                   <span>
                     <i class="fab fa-discord"></i> 
                     <span class="expand-text">Discord</span>
                   </span>
                 </a>
-                <a class="btn btn-facebook" href="#">
+                <a class="btn btn-facebook" href="https://facebook.com/{{ site.facebook_username }}">
                   <span>
                     <i class="fab fa-facebook"></i>
                     <span class="expand-text">
@@ -47,7 +47,7 @@
                     </span>
                   </span>
                 </a>
-                <a class="btn btn-twitter" href="#">
+                <a class="btn btn-twitter" href="https://twitter.com/{{ site.twitter_username }}">
                   <span>
                     <i class="fab fa-twitter"></i>
                     <span class="expand-text">
@@ -77,5 +77,7 @@
     <script src="{{'/assets/vendor/popper.min.js' | absolute_url}}"></script>
     <script src="{{'/assets/vendor/bootstrap.min.js' | absolute_url}}"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <script src="{{'/assets/vendor/jquery.scrollify.js' | absolute_url}}"></script>
+    <script src="{{'/assets/js/main.js' | absolute_url}}"></script>
   </body>
 </html>

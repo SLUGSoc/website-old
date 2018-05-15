@@ -1,0 +1,13 @@
+---
+layout: post
+title: "God of War"
+summary: BOI!
+prompt: Test Prompt
+image: https://placehold.it/800x500
+image_description: Another placeholder image
+games: ["Gears of War", "Death Road to Canada"]
+categories: weekly-social
+event-date: 2018-05-22
+---
+
+Blurb for this week's social.

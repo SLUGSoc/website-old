@@ -8,11 +8,17 @@ $theme-colors: (
   "discord": #7289DA,
   "facebook": #3b5998,
   "twitter": #00aced,
+  "steam": black,
+  "nintendo-switch": #e60012,
+  "wii-u": #009ac7,
+  "xbox-one": #107c10,
+  "playstation-4": #003791,
+  "xbox-360": #93c73e
 );
 @import "../node_modules/bootstrap/scss/variables";
 
 $headings-font-family: 'Bebas', $font-family-sans-serif;
-.navbar-brand {
+.navbar-brand, .nav-link {
     font-family: $headings-font-family;
 }
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="container my-3">
+<div class="container pt-3">
   <h1>Socials Schedule</h1>
   <div class="table-responsive">
     <table class="table">
@@ -12,37 +12,30 @@ layout: default
         </tr>
       </thead>
       <tbody>
+        {% for post in site.categories.weekly-social %}
         <tr>
-          <td class="text-center">1</td>
-          <td>
+          <td class="text-center">{{post.event-date | date: "%a, %b %d"}}</td>
+          <td class="text-center">
             <ul class="list-unstyled">
-              <li>
-                Super Smash Bros. for Wii U <span class="badge badge-pill badge-info">Wii U</span>
-              </li>
-              <li>
-                Mario Kart 8 Deluxe <span class="badge badge-pill badge-danger">Nintendo Switch</span>
-              </li>
+              {% for game in post.games %}
+                {% assign game_entry = site.data.games | where: "title", game | first %}
+                {% assign platform = site.data.platforms | where: "name", game_entry.platform | first %}
+                <li>
+                  {{ game }} 
+                  {% if game_entry and platform %}
+                    <span class="badge badge-pill badge-{{ platform.color | default: 'secondary' }}">
+                      {% if platform.icon %}
+                      <i class="fab fa-{{platform.icon}}"></i>
+                      {% endif %}
+                      {{ platform.name }}
+                    </span>
+                  {% endif %}
+                </li>
+              {% endfor %}
             </ul>
           </td>
         </tr>
-        <tr>
-          <td class="text-center">2</td>
-          <td>
-            <ul class="list-unstyled">
-              <li>TowerFall Ascension <span class="badge badge-pill badge-secondary">PC</span></li>
-              <li>Kirby Air Ride <span class="badge badge-pill badge-primary">GameCube</span></li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td class="text-center">3</td>
-          <td>
-            <ul class="list-unstyled">
-              <li>1-2-Switch <span class="badge badge-pill badge-danger">Nintendo Switch</span></li>
-              <li>Dance Central <span class="badge badge-pill badge-success">Xbox 360</span></li>
-            </ul>
-          </td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
