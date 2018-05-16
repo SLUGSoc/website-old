@@ -19,7 +19,7 @@ check:
 		_site
 
 install: $(PROJECT_DEPS)
-	$(BUNDLE) install --path vendor/bundler
+	$(BUNDLE) install --binstubs --path vendor/bundler
 	$(YARN) install
 
 update: $(PROJECT_DEPS)
