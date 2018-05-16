@@ -161,7 +161,7 @@ layout: default
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
         <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
-        {% capture discord_link %}https://discord.gg/{{+site.discord_invite_link}}{% endcapture %}
+        {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
         <div class="btn-group d-flex mb-3">
           {% include button.html style='primary' class="btn-lg w-100 mb-3" href="#" text="Join SLUGS &raquo;" %}
           {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server &raquo;' icon='fab fa-discord' %}
