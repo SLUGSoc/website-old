@@ -1,0 +1,8 @@
+<a class="btn btn-{{ include.style }} {{ include.class }}" href="{{ include.href }}">
+  <span>
+    {% if include.icon %}
+      <i class="{{ include.icon }}"></i> 
+    {% endif %}
+    {{ include.text }}
+  </span>
+</a>

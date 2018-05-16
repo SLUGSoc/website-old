@@ -1,0 +1,21 @@
+<div class="carousel-item {% if forloop.first %} active {% endif %}">
+  <div style="background-image: url({{ include.post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100vh; width: auto;">
+  </div>
+  <div class="container">
+    <div class="carousel-caption text-left rounded">
+      <h1>{{ include.post.title }}</h1>
+      <p class="bg-light text-dark p-1 rounded"><b><span class="badge badge-pill badge-primary">{{ event_date | date: "%a, %b %d" }}</span> {{ include.post.summary }}</b></p>
+      <p>
+      <a class="btn btn-lg btn-primary" href="{{ include.post.url }}" role="button">
+        <span>
+          {% if include.post.prompt %}
+          {{ include.post.prompt }}
+          {% else %}
+          Learn more
+          {% endif %}
+        </span>
+      </a>
+      </p>
+    </div>
+  </div>
+</div>
