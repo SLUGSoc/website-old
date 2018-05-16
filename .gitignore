@@ -7,3 +7,4 @@ _site/
 .jekyll-metadata
 node_modules/
 vendor/
+.bundle/
