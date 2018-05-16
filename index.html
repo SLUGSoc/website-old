@@ -1,23 +1,30 @@
 ---
 layout: default
 ---
+{% assign posts = site.posts | where_exp: 'event_date', 'event_date > site.time' %}
 <section class="snap-point">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       {% for post in site.posts %}
+      {% assign curr_date = site.time | date: "%Y-%m-%d" %}
+      {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
+      {% if curr_date < event_date %}
       <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active">{% endif %}</li>
+      {% endif %}
       {% endfor %}
     </ol>
     <div class="carousel-inner">
       {% for post in site.posts %}
+      {% assign curr_date = site.time | date: "%Y-%m-%d" %}
+      {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
+      {% if curr_date < event_date %}
       <div class="carousel-item {% if forloop.first %} active {% endif %}">
-        <!-- <img src="{{ post.image }}" alt="{{ post.image_description}}" > -->
-        <div style="background-image: url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 450px; width: auto;">
+        <div style="background-image: url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100vh; width: auto;">
         </div>
         <div class="container">
           <div class="carousel-caption text-left rounded">
             <h1>{{ post.title }}</h1>
-            <p><b>{{ post.summary }}</b></p>
+            <p><b>{{ event_date }} {{ post.summary }}</b></p>
             <p>
             <a class="btn btn-lg btn-primary" href="{{ post.url }}" role="button">
               <span>
@@ -33,6 +40,7 @@ layout: default
           </div>
         </div>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -46,9 +54,9 @@ layout: default
   </div>
 </section>
 
-<section id="summary" class="snap-point">
+<section id="summary" class="snap-point bg-dark text-light">
   <div class="container">
-    <div class="row mt-5">
+    <div class="row pt-5">
       <div class="col-lg-4">
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>Socials</h2>
@@ -89,6 +97,7 @@ layout: default
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
+<section class="snap-point">
   <div class="container marketing mt-5">
 
     <!-- Three columns of text below the carousel -->
@@ -137,12 +146,16 @@ layout: default
 
     <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+  </div>
+</section>
+  <!-- /.container -->
 
 
   <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <footer class="bg-dark text-light">
+    <div class="container">
+      <p class="float-right"><a class="text-light" href="#">Back to top</a></p>
+      <p>&copy; 2017-2018 SLUGSoc</p>
+    </div>
   </footer>
 
