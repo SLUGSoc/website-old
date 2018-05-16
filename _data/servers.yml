@@ -1,9 +1,8 @@
 - game: TrackMania Canyon     
-  port: 2450/3450/5000
+  port: 2350
 - game: Garry's Mod
   port: 27018
 - game: Source (Team Fortress 2, Left 4 Dead 2)
   port: 27025
-- game: teamspeak3      
-  port: 30033
-        10011
+- game: TeamSpeak 3
+  port: Default

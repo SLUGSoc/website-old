@@ -18,28 +18,7 @@ layout: default
       {% assign curr_date = site.time | date: "%Y-%m-%d" %}
       {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
       {% if curr_date < event_date %}
-      <div class="carousel-item {% if forloop.first %} active {% endif %}">
-        <div style="background-image: url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100vh; width: auto;">
-        </div>
-        <div class="container">
-          <div class="carousel-caption text-left rounded">
-            <h1>{{ post.title }}</h1>
-            <p class="bg-light text-dark p-1 rounded"><b><span class="badge badge-pill badge-primary">{{ event_date | date: "%a, %b %d" }}</span> {{ post.summary }}</b></p>
-            <p>
-            <a class="btn btn-lg btn-primary" href="{{ post.url }}" role="button">
-              <span>
-                {% if post.prompt %}
-                {{ post.prompt }}
-                {% else %}
-                Learn more
-                {% endif %}
-                <!-- <span class="expand-text">No, really</span> -->
-              </span>
-            </a>
-            </p>
-          </div>
-        </div>
-      </div>
+         {% include carousel_item.html post=post %}
       {% endif %}
       {% endfor %}
     </div>
@@ -89,9 +68,7 @@ layout: default
           </tbody>
         </table>
         <p>
-        <a class="btn btn-secondary w-100" href="#" role="button">
-          <span>View details &raquo;</span>
-        </a>
+        {% include button.html style="secondary" class="w-100" href="#" text="View details &raquo;" %}
         </p>
       </div><!-- /.col-lg-4 -->
       <div class="col">
@@ -113,9 +90,7 @@ layout: default
             {% endfor %}
           </tbody>
         </table>
-        <a class="btn btn-secondary w-100" href="#" role="button">
-          <span>View details &raquo;</span>
-        </a>
+        {% include button.html style="secondary" class="w-100" href="#" text="View details &raquo;" %}
         </p>
       </div>
     </div>
@@ -124,10 +99,9 @@ layout: default
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>Competitive</h2>
         <p>For the ranked players among you, we engage with the <abbr title="National University Esports League">NUEL</abbr> every year in games like CS:GO, League of Legends, and Rocket League. Take the fight to other universities and wave that black and gold banner!</p>
+        <p>Our eSports officer will be following goings-on with NUEL, so if you're interested, keep tabs on the <b>#nuel</b> channel in the server!</p>
         <p>
-        <a class="btn btn-secondary w-100" href="#" role="button">
-          <span>View details &raquo;</span>
-        </a>
+        {% include button.html style="discord" class="w-100" href="#" icon="fab fa-discord" text="Join Discord server &raquo;" %}
         </p>
       </div>
       <div class="col">
@@ -148,11 +122,6 @@ layout: default
             {% endfor %}
           </tbody>
         </table>
-        <p>
-        <a class="btn btn-secondary w-100" href="#" role="button">
-          <span>View details &raquo;</span>
-        </a>
-        </p>
       </div>
     </div>
   </div>
@@ -179,11 +148,7 @@ layout: default
       <div class="col-md-7">
         <h2 class="featurette-heading">Our committee <span class="text-muted">loves games!</span></h2>
         <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
-        <a class="btn btn-lg btn-primary w-100 mb-3" href="committee.html">
-          <span>
-            Learn more &raquo;
-          </span>
-        </a>
+        {% include button.html style="primary" class="btn-lg w-100 mb-3" href="committee.html" text="Learn more &raquo;" %}
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
@@ -196,16 +161,10 @@ layout: default
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
         <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
+        {% capture discord_link %}https://discord.gg/{{+site.discord_invite_link}}{% endcapture %}
         <div class="btn-group d-flex mb-3">
-          <a class="btn btn-lg btn-primary w-100" href="#">
-            <span>Join SLUGS &raquo;</span>
-          </a>
-          <a class="btn btn-lg btn-discord w-100" href="https://discord.gg/{{ site.discord_invite_link }}">
-            <span>
-              <i class="fab fa-discord"></i> 
-              Join Discord server &raquo;
-            </span>
-          </a>
+          {% include button.html style='primary' class="btn-lg w-100 mb-3" href="#" text="Join SLUGS &raquo;" %}
+          {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server &raquo;' icon='fab fa-discord' %}
         </div>
       </div>
       <div class="col-md-5 order-md-1">
@@ -220,11 +179,7 @@ layout: default
         <h2 class="featurette-heading"><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
         <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
         <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
-        <a class="btn btn-lg btn-primary w-100" href="lan.html">
-          <span>
-            About SLUGS LAN events &raquo;
-          </span>
-        </a>
+        {% include button.html style="primary" class="btn-lg w-100 mb-3" href="#" text="About SLUGS LAN events &raquo;" %}
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
