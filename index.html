@@ -56,7 +56,7 @@ layout: default
 <section id="summary" class="snap-point bg-dark text-light">
   <div class="container">
     <div class="row pt-5">
-      <div class="col-lg-4">
+      <div class="col">
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>Socials</h2>
         <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
@@ -94,7 +94,7 @@ layout: default
         </a>
         </p>
       </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
+      <div class="col">
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>LAN events</h2>
         <p>Once every few weeks, we run LAN events at the Ridge building in Ranmoor Student Village. They're an excellent opportunity to engage with the groups you play games with. If you've not yet been to a LAN and would like to learn more, head this way!</p>
@@ -117,8 +117,10 @@ layout: default
           <span>View details &raquo;</span>
         </a>
         </p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col">
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>Competitive</h2>
         <p>For the ranked players among you, we engage with the <abbr title="National University Esports League">NUEL</abbr> every year in games like CS:GO, League of Legends, and Rocket League. Take the fight to other universities and wave that black and gold banner!</p>
@@ -127,7 +129,31 @@ layout: default
           <span>View details &raquo;</span>
         </a>
         </p>
-      </div><!-- /.col-lg-4 -->
+      </div>
+      <div class="col">
+        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
+        <h2>Game Servers</h2>
+        <p>We also host our own game server on sleipnir.slugsoc.co.uk. Details of these are as follows:</p>
+        <table class="table table-sm">
+          <thead>
+            <th>Game</th>
+            <th>Port</th>
+          </thead>
+          <tbody>
+            {% for server in site.data.servers %}
+            <tr>
+              <td>{{ server.game }}</td>
+              <td>{{ server.port }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <p>
+        <a class="btn btn-secondary w-100" href="#" role="button">
+          <span>View details &raquo;</span>
+        </a>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -174,7 +200,7 @@ layout: default
           <a class="btn btn-lg btn-primary w-100" href="#">
             <span>Join SLUGS &raquo;</span>
           </a>
-          <a class="btn btn-lg btn-discord w-100" href="#">
+          <a class="btn btn-lg btn-discord w-100" href="https://discord.gg/{{ site.discord_invite_link }}">
             <span>
               <i class="fab fa-discord"></i> 
               Join Discord server &raquo;
