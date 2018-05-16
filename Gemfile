@@ -29,4 +29,5 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 gem "rake"
+gem "webpack" # required to have Heroku install Yarn
 ruby "2.4.2"

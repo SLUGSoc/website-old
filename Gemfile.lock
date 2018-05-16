@@ -61,6 +61,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    webpack (0.4.2)
 
 PLATFORMS
   ruby
@@ -71,6 +72,7 @@ DEPENDENCIES
   minima (~> 2.0)
   rake
   tzinfo-data
+  webpack
 
 RUBY VERSION
    ruby 2.4.2p198
