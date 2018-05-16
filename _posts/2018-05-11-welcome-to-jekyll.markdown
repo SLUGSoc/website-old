@@ -3,7 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 summary: Test post!
 date:   2018-05-11 09:55:53 +0100
-image:  https://placehold.it/800x500
+> image:  https://placehold.it/800x500
 image_description: Placeholder image
 prompt: Test Prompt
 categories: jekyll update

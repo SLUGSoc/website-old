@@ -1,4 +1,5 @@
 $font-size-base: 1.2rem;
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
 @font-face {
     font-family: Bebas;
     src: url("/assets/bebas_neue/BebasNeue Bold.ttf")
@@ -17,6 +18,7 @@ $theme-colors: (
 );
 @import "../node_modules/bootstrap/scss/variables";
 
+$font-family-sans-serif: 'Roboto', $font-family-sans-serif;
 $headings-font-family: 'Bebas', $font-family-sans-serif;
 .navbar-brand, .nav-link {
     font-family: $headings-font-family;
@@ -38,7 +40,7 @@ $headings-font-family: 'Bebas', $font-family-sans-serif;
 }
 
 div.carousel-caption {
-  text-shadow: 2px 2px 5px gray;
+  text-shadow: 2px 2px 5px #111111;
 }
 
 .btn {

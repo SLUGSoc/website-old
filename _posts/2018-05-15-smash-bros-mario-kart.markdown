@@ -3,7 +3,7 @@ layout: post
 title: "Smash and Mario Kart"
 summary: Duke it out with SLUGS in Super Smash Bros. and Mario Kart!
 prompt: Test Prompt
-image: https://placehold.it/800x500
+image: https://images4.alphacoders.com/538/thumb-1920-53838.jpg
 image_description: Another placeholder image
 games: ["Super Smash Bros. for Wii U", "Mario Kart 8 Deluxe"]
 categories: weekly-social
