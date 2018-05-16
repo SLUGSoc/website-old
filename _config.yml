@@ -35,6 +35,8 @@ sass:
     load_paths:
         - _sass
         - node_modules
+navbar-height: 62
+future: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

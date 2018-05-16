@@ -24,7 +24,7 @@ layout: default
         <div class="container">
           <div class="carousel-caption text-left rounded">
             <h1>{{ post.title }}</h1>
-            <p><b>{{ event_date }} {{ post.summary }}</b></p>
+            <p class="bg-light text-dark p-1 rounded"><b><span class="badge badge-pill badge-primary">{{ event_date | date: "%a, %b %d" }}</span> {{ post.summary }}</b></p>
             <p>
             <a class="btn btn-lg btn-primary" href="{{ post.url }}" role="button">
               <span>
@@ -53,7 +53,6 @@ layout: default
     </a>
   </div>
 </section>
-
 <section id="summary" class="snap-point bg-dark text-light">
   <div class="container">
     <div class="row pt-5">
@@ -61,6 +60,34 @@ layout: default
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>Socials</h2>
         <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
+        <table class="table table-sm">
+          <tbody>
+            {% for post in site.categories.weekly-social limit: 3 %}
+            <tr>
+              <td class="text-center">{{post.event-date | date: "%a, %b %d"}}</td>
+              <td class="text-center">
+                <ul class="list-unstyled">
+                  {% for game in post.games %}
+                    {% assign game_entry = site.data.games | where: "title", game | first %}
+                    {% assign platform = site.data.platforms | where: "name", game_entry.platform | first %}
+                    <li>
+                      {{ game }} 
+                      {% if game_entry and platform %}
+                        <span class="badge badge-pill badge-{{ platform.color | default: 'secondary' }}">
+                          {% if platform.icon %}
+                          <i class="fab fa-{{platform.icon}}"></i>
+                          {% endif %}
+                          {{ platform.name }}
+                        </span>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
         <p>
         <a class="btn btn-secondary w-100" href="#" role="button">
           <span>View details &raquo;</span>
@@ -72,6 +99,20 @@ layout: default
         <h2>LAN events</h2>
         <p>Once every few weeks, we run LAN events at the Ridge building in Ranmoor Student Village. They're an excellent opportunity to engage with the groups you play games with. If you've not yet been to a LAN and would like to learn more, head this way!</p>
         <p>
+        <table class="table table-sm">
+          <tbody>
+            {% for post in site.categories.lan limit: 3 %}
+            <tr>
+              <td class="text-center">{{post.event-date | date: "%a, %b %d"}}</td>
+              <td class="text-center">
+                <ul class="list-unstyled">
+                  {{ post.title }}
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
         <a class="btn btn-secondary w-100" href="#" role="button">
           <span>View details &raquo;</span>
         </a>
@@ -110,11 +151,16 @@ layout: default
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Our committee</h2>
-        <p class="lead">Thsdgbhjds</p>
+        <h2 class="featurette-heading">Our committee <span class="text-muted">loves games!</span></h2>
+        <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
+        <a class="btn btn-lg btn-primary w-100 mb-3" href="committee.html">
+          <span>
+            Learn more &raquo;
+          </span>
+        </a>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
       </div>
     </div>
 
@@ -122,8 +168,19 @@ layout: default
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
+        <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
+        <div class="btn-group d-flex mb-3">
+          <a class="btn btn-lg btn-primary w-100" href="#">
+            <span>Join SLUGS &raquo;</span>
+          </a>
+          <a class="btn btn-lg btn-discord w-100" href="#">
+            <span>
+              <i class="fab fa-discord"></i> 
+              Join Discord server &raquo;
+            </span>
+          </a>
+        </div>
       </div>
       <div class="col-md-5 order-md-1">
         <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
@@ -134,8 +191,14 @@ layout: default
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading"><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
+        <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
+        <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
+        <a class="btn btn-lg btn-primary w-100" href="lan.html">
+          <span>
+            About SLUGS LAN events &raquo;
+          </span>
+        </a>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">

@@ -56,17 +56,22 @@
                 </a>
               </div>
             </form>
+            {% assign curr_date = site.time | date: '%s' %}
+            {% assign lan_post = site.categories.lan.first %}
+            {% assign lan_date = lan_post.event-date | date: '%s' %}
+            {% if lan_date > curr_date %}
             <li class="nav-item">
               <a class=" btn btn-light" href="{{ site.categories.lan.first.url }}">
                 <span>{{ site.categories.lan.first.title}}</span>
               </a>
             </li>
+            {% endif %}
           </ul>
         </div>
       </nav>
     </header>
 
-    <main role="main" style="margin-top: 56px;">
+    <main role="main" style="margin-top: {{ site.navbar-height }}px;">
       {{ content }}
     </main>
 

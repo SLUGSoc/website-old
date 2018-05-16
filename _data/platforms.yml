@@ -15,3 +15,9 @@
 - name: PlayStation 3
   color: playstation-4
   icon: playstation
+- name: PC
+  color: primary
+- name: Dreamcast
+  color: dreamcast
+- name: Wii
+  color: wii

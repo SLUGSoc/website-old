@@ -11,6 +11,8 @@ $theme-colors: (
   "twitter": #00aced,
   "steam": black,
   "nintendo-switch": #e60012,
+  "wii": #dddddd,
+  "dreamcast": #3b76c2,
   "wii-u": #009ac7,
   "xbox-one": #107c10,
   "playstation-4": #003791,
@@ -40,7 +42,13 @@ $headings-font-family: 'Bebas', $font-family-sans-serif;
 }
 
 div.carousel-caption {
-  text-shadow: 2px 2px 5px #111111;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: transparent; /* fallback color */
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1%;
+}
+div.carousel-caption h1 {
+  text-shadow: 3px 3px #111111;
 }
 
 .btn {
@@ -62,4 +70,8 @@ div.carousel-caption {
       width:70px;
     }
   }
+}
+
+section {
+  min-height: 100vh;
 }
