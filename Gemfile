@@ -31,3 +31,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "rake"
 gem "webpacker" # required to have Heroku install Yarn
 ruby "2.4.2"
+
+# They don't think it work like it should, but it do.
