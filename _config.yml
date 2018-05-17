@@ -35,7 +35,7 @@ sass:
     load_paths:
         - _sass
         - node_modules
-navbar-height: 62
+navbar-height: 61
 future: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -49,6 +49,7 @@ exclude:
 #   - Gemfile.lock
   - node_modules
   - vendor/bundle/
+  - vendor/bundler/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
