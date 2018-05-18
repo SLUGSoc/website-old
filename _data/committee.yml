@@ -1,3 +1,57 @@
+- name: Jamie
+  alias: Annoytanor
+  role: President
+  id:
+    steam: Annoytanor
+    discord: annoytanor#4668
+    battlenet: Annoytanor#2471
+  blurb: "*dabs* how do you do, fellow kids. I'm Jamie. I do computer science with AI and I play games like Battlefield 4, Bf1, Overwatch, minecraft, stellaris, random indie building games D:, PUBG and other things. I usually go by Annoytanor or Annoytanor007 when some f*cker steals my name >:( I'm the president somehow and I do things. If you've got any feedback or ideas hit me up like a coke bitch and I'll tell the relevant peeps and get the ball rolling. I also like anime."
+- name: Laura
+  alias: Lauriestar
+  role: Inclusions Officer
+  id:
+    steam: Lauriestar
+    discord: Laura#7175
+    nintendo: Lauriestar
+  blurb: Hey, I’m Laura! I’m the Inclusions Officer for SLUGSoc, so my goal is to make sure everyone feels welcome in the society. If you feel nervous showing up to your first event, feel free to contact me through FB or university e-mail, and I’ll be happy to introduce you to everyone! I’m currently a PhD student, and my favourite games are anything Nintendo, Stardew Valley, and some Overwatch/League of Legends thrown in. If you ever want someone to play games with, or just to have a chat, feel free to message me anytime.
+- name: Jimmez
+  alias: Aterfax
+  role: Treasurer
+  id:
+    steam: Aterfax
+    discord: Aterfax#0661
+  blurb: Currently doing a PhD at the Uni, previously done most of the roles from tech to sec. Being the money boss for this year, so if you have ideas for how to make or spend money for the society's benefit, give me a bell. You'll see me at LANs and socials with the money box. Mainly play FPS, RTS or Star Wars / Mil themed games.
+- name: Marine
+  alias: SkywardWind
+  role: Social Secretary
+  id:
+    steam: SkywardWind
+    discord: SkywardWind#9684
+  blurb: Hi, I'm Marine and I'm SLUGSoc's Social Secretary. I plan out our various events, and organise weekly socials with the console officer. If you want to do anything with the society, talk to me! I play Zelda, Overwatch, Hearthstone, and obscure point & click games. I work in marketing at an online video game retailer, and I like things to be organised and pretty.
+- name: Bobby
+  alias: bobbo
+  role: Publicity Officer
+  id:
+    discord: bobbo#9396
+  blurb: I’m a journalism grad working at Sheffield uni and I’m responsible for designing our promotional stuff, like LAN posters and event graphics, and looking after our social media feeds! I play all sorts, but a lot of Mario Kart, Overwatch and Hearthstone in particular.
+- name: Ashleigh
+  alias: Verglas/El Gingerino
+  role: Secretary
+  blurb: Hi, I'm Ash and I'm the Secretary for SLUGS. My job is to deal with all the correspondence for the society and all the admin stuff. I mainly play open-world adventure games (The Witcher 3 is my jam) or smaller indie games like The Binding of Isaac. I study Biochemistry and Genetics at UoS so if you need help with your biology homework or want to play some Don't Starve then send me a message!
+- name: Charlie
+  role: Food Officer
+- name: Phil
+  role: Esports Officer
+- name: Greg
+  alias: Gregregorovich
+  role: Senior Tech Officer
+  id:
+    discord: '"Chip" Gregregorovich#8603'
+- name: Eric
+  alias: Chintam
+  role: Senior Tech Officer
+  id:
+    discord: Chintam#0468
 - name: Simon
   alias: Kotori
   role: Tech Officer
@@ -6,80 +60,18 @@
     steam: Kotorious B.R.D.
     discord: Kotori#2945
     nintendo: SLUGS☆ことり
+    battlenet: UndyingFish#2388
   blurb: Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!
-- name: Jimmez
-  alias: Aterfax
-  role: Treasurer
-  image: 
-  id:
-    steam: Aterfax
-    discord:
-  blurb: Currently doing a PhD at the Uni, previously done most of the roles from tech to sec. Being the money boss for this year, so if you have ideas for how to make or spend money for the society's benefit, give me a bell. You'll see me at LANs and socials with the money box. Mainly play FPS, RTS or Star Wars / Mil themed games.
-- name: Marine
-  alias: SkywardWind
-  role: Social Secretary
-  image: 
-  id:
-    steam: SkywardWind
-    discord: SkywardWind
-  blurb: Hi, I'm Marine and I'm SLUGSoc's Social Secretary. I plan out our various events, and organise weekly socials with the console officer. If you want to do anything with the society, talk to me! I play Zelda, Overwatch, Hearthstone, and obscure point & click games. I work in marketing at an online video game retailer, and I like things to be organised and pretty.
-- name: Ashleigh
-  alias: Ginger
-  role: Secretary
-  image: 
-  id:
-    steam:
-    discord:
-  blurb: 
-- name: Jamie
-  alias: Annoytanor
-  role: President
-  image: 
-  id:
-    steam: Annoytanor
-    discord:
-  blurb: 
 - name: Tom
-  alias: Credible Threat[TM]
-  role: President
-  image: 
-  id:
-    steam: Annoytanor
-    discord:
-  blurb: 
-- name: Laura
-  alias: Lauriestar
-  role: Inclusions Officer
-  image: 
-  id:
-    steam: Lauriestar
-    discord: Laura
-    nintendo: Lauriestar
-  blurb: 
-- name: Rebecca
-  alias:
+  alias: Credible Threat™
   role: Tech Officer
-  image: 
   id:
-    steam:
-    discord:
-    nintendo:
-  blurb: 
-- name: Greg
-  alias: Gregregorovich
-  role: Senior Tech Officer
-  image: 
+    discord: Dr House#4064
+  blurb: Currently a 2nd year undergraduate studying Chemical Engineering. My responsibilities as assistant tech primarily include assisting the senior techs in setting up and running the LAN, gaining knowledge about SLUGs specific stuff such as the gateway and website so that I can help maintain and upgrade them. You will find me playing a wide variety of games including FPS, RTS, sandbox, Star Wars games, etc.
+- name: Fred
+  alias: RaptureAwaits
+  role: Tech Officer
   id:
-    steam:
-    discord:
-    nintendo:
-  blurb: 
-- name: Eric
-  alias: Chintam
-  role: Senior Tech Officer
-  image: 
-  id:
-    steam:
-    discord:
-    nintendo:
-  blurb: 
+    discord: RaptureAwaits#7905
+- name: Rebecca
+  role: Tech Officer

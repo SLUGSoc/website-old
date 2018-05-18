@@ -1,20 +1,20 @@
 - name: Nintendo Switch
   color: nintendo-switch
-  icon: nintendo-switch
+  icon: fab fa-nintendo-switch
 - name: Wii U
   color: wii-u
 - name: Xbox 360
   color: xbox-360
-  icon: xbox
+  icon: fab fa-xbox
 - name: Xbox One
   color: xbox-one
-  icon: xbox
+  icon: fab fa-xbox
 - name: PlayStation 4
   color: playstation-4
-  icon: playstation
+  icon: fab fa-playstation
 - name: PlayStation 3
   color: playstation-4
-  icon: playstation
+  icon: fab fa-playstation
 - name: PC
   color: primary
 - name: Dreamcast
@@ -23,7 +23,10 @@
   color: wii
 - name: Discord
   color: discord
-  icon: discord
+  icon: fab fa-discord
 - name: Steam
   color: steam
-  icon: steam
+  icon: fab fa-steam
+- name: Battle.net
+  color: battlenet
+  icon: fas fa-snowflake

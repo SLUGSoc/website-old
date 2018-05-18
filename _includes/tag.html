@@ -1,5 +1,5 @@
 {% assign style=site.data.platforms | where: "name", include.style | first %}
-<span class="badge badge-pill badge-{{ style.color }}">
-  <i class="fa-fw fab fa-{{ style.icon}}"></i>
+<span class="badge badge-pill badge-{{ style.color }}" data-toggle="tooltip" data-placement="left" title="{{ style.name }}">
+  <i class="fa-fw {{ style.icon}}"></i>
   {{ include.id }}
 </span>
