@@ -1,0 +1,11 @@
+{% assign curr_date = site.time | date: '%s' %}
+{% assign post = include.category.first %}
+{% assign date = post.event-date | date: '%s' %}
+{% if date > curr_date %}
+<a class=" btn btn-light mx-3" href="{{ post.url }}">
+  <span>{{ post.title}}</span>
+</a>
+{% include glance_event.html post=post %}
+{% else %}
+<p class="text-center">Details coming soon!</p>
+{% endif %}

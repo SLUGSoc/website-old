@@ -2,50 +2,23 @@
 layout: default
 ---
 {% assign posts = site.posts | where_exp: 'event_date', 'event_date > site.time' %}
-<div class="snap-point" style="height: {{ site.navbar-height }}px;">
+<div class="row header-page m-0">
+  <section class="col-md px-0">
+    {% include carousel.html %}
+  </section>
+  <section class="col-md" style="background-color:red; max-height: 92vh; overflow: auto;">
+    <div class="container py-3">
+      <h2>Welcome to SLUGSoc!</h2>
+      <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
+      <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
+      <h3>Next Social</h3>
+      {% include glance_full_entry.html category=site.categories.weekly-social %}
+      <!-- LAN post -->
+      <h3>Next LAN</h3>
+      {% include glance_full_entry.html category=site.categories.lan %}
+    </div>
+  </section>
 </div>
-<section>
-  <div class="row m-0">
-    <div class="col-md px-0">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          {% for post in site.posts %}
-          {% assign curr_date = site.time | date: "%Y-%m-%d" %}
-          {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
-          {% if curr_date < event_date %}
-          <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active">{% endif %}</li>
-          {% endif %}
-          {% endfor %}
-        </ol>
-        <div class="carousel-inner">
-          {% for post in site.posts %}
-          {% assign curr_date = site.time | date: "%Y-%m-%d" %}
-          {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
-          {% if curr_date < event_date %}
-             {% include carousel_item.html post=post %}
-          {% endif %}
-          {% endfor %}
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-    <div class="col-md bg-dark text-light">
-      <div class="container my-3">
-        <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
-        <h3>Next Social</h3>
-        {% include glance_event.html post=site.categories.weekly-social.first %}
-        <h3>Next LAN</h3>
-        {% include glance_event.html post=site.categories.lan.first %}
-      </div>
-    </div>
-  </div>
 </section>
 <section id="summary" class="snap-point bg-dark text-light">
   <div class="container">
@@ -62,19 +35,19 @@ layout: default
               <td class="text-center">
                 <ul class="list-unstyled">
                   {% for game in post.games %}
-                    {% assign game_entry = site.data.games | where: "title", game | first %}
-                    {% assign platform = site.data.platforms | where: "name", game_entry.platform | first %}
-                    <li>
-                      {{ game }} 
-                      {% if game_entry and platform %}
-                        <span class="badge badge-pill badge-{{ platform.color | default: 'secondary' }}">
-                          {% if platform.icon %}
-                          <i class="fab fa-{{platform.icon}}"></i>
-                          {% endif %}
-                          {{ platform.name }}
-                        </span>
+                  {% assign game_entry = site.data.games | where: "title", game | first %}
+                  {% assign platform = site.data.platforms | where: "name", game_entry.platform | first %}
+                  <li>
+                    {{ game }} 
+                    {% if game_entry and platform %}
+                    <span class="badge badge-pill badge-{{ platform.color | default: 'secondary' }}">
+                      {% if platform.icon %}
+                      <i class="fab fa-{{platform.icon}}"></i>
                       {% endif %}
-                    </li>
+                      {{ platform.name }}
+                    </span>
+                    {% endif %}
+                  </li>
                   {% endfor %}
                 </ul>
               </td>
@@ -148,65 +121,65 @@ layout: default
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<section class="snap-point">
-  <div class="container marketing mt-5">
+  <section class="snap-point">
+    <div class="container marketing mt-5">
 
-    <!-- Three columns of text below the carousel -->
-    <!-- /.row -->
+      <!-- Three columns of text below the carousel -->
+      <!-- /.row -->
 
 
-    <!-- START THE FEATURETTES -->
+      <!-- START THE FEATURETTES -->
 
-    <hr class="featurette-divider">
+      <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Our committee <span class="text-muted">loves games!</span></h2>
-        <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
-        {% include button.html style="primary" class="btn-lg w-100 mb-3" href="committee.html" text="Learn more &raquo;" %}
-      </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
-        <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
-        {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
-        <div class="btn-group d-flex mb-3">
-          {% include button.html style='primary' class="btn-lg w-100 mb-3" href="#" text="Join SLUGS &raquo;" %}
-          {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server &raquo;' icon='fab fa-discord' %}
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Our committee <span class="text-muted">loves games!</span></h2>
+          <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
+          {% include button.html style="primary" class="btn-lg w-100 mb-3" href="committee.html" text="Learn more &raquo;" %}
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
         </div>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
+          <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
+          {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
+          <div class="btn-group d-flex mb-3">
+            {% include button.html style='primary' class="btn-lg w-100 mb-3" href="#" text="Join SLUGS &raquo;" %}
+            {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server &raquo;' icon='fab fa-discord' %}
+          </div>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
+        </div>
       </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
+          <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
+          <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
+          {% include button.html style="primary" class="btn-lg w-100 mb-3" href="#" text="About SLUGS LAN events &raquo;" %}
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading"><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
-        <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
-        <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
-        {% include button.html style="primary" class="btn-lg w-100 mb-3" href="#" text="About SLUGS LAN events &raquo;" %}
-      </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div>
-</section>
+  </section>
   <!-- /.container -->
 
 
