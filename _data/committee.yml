@@ -38,10 +38,15 @@
   alias: Verglas/El Gingerino
   role: Secretary
   blurb: Hi, I'm Ash and I'm the Secretary for SLUGS. My job is to deal with all the correspondence for the society and all the admin stuff. I mainly play open-world adventure games (The Witcher 3 is my jam) or smaller indie games like The Binding of Isaac. I study Biochemistry and Genetics at UoS so if you need help with your biology homework or want to play some Don't Starve then send me a message!
+- name: Matt
+  role: Console Officer
 - name: Charlie
   role: Food Officer
 - name: Phil
   role: Esports Officer
+  blurb: Hi, I’m Phil! As esports officer I’m responsible for handling all tasks related to esports, such as making sure competitions such as NUEL and others go smoothly, arranging ways for people to engage with esports such as viewing parties, and generally increasing awareness of what’s going on in the esports world. I play, well… mainly just Hearthstone, where I go by PDeegz, but I follow pretty much every esport to at least some degree. I’m nearly always around, so feel free to come talk to me about esports or anything else.
+  id:
+    discord: PDeegz#3746
 - name: Greg
   alias: Gregregorovich
   role: Senior Tech Officer
