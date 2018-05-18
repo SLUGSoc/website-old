@@ -6,7 +6,9 @@ image: /assets/img/2018-06-07-social.jpg
 image_description: Random Games Tournament
 games: ["???"]
 categories: weekly-social
-event-date: 2018-06-07
+event:
+  date: 2018-06-07 19:30
+  location: Huttons Bar
 ---
 
 We're bringing tournaments back, and to give an equal chance to everyone, it'll be a RANDOM GAMES tournament!

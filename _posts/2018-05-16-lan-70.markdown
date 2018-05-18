@@ -6,7 +6,9 @@ prompt: Test Prompt
 image: https://images4.alphacoders.com/538/thumb-1920-53838.jpg
 image_description: Another placeholder image
 categories: lan
-event-date: 2018-06-08
+event:
+  date: 2018-06-08
+  location: The Ridge at Ranmoor
 ---
 
 Blurb for this week's social.

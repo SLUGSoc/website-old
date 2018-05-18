@@ -2,7 +2,7 @@
   <ol class="carousel-indicators">
     {% for post in site.posts %}
     {% assign curr_date = site.time | date: "%Y-%m-%d" %}
-    {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
+    {% assign event_date = post.event.date | date: "%Y-%m-%d" %}
     {% if curr_date < event_date %}
     <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active">{% endif %}</li>
     {% endif %}
@@ -11,7 +11,7 @@
   <div class="carousel-inner">
     {% for post in site.posts %}
     {% assign curr_date = site.time | date: "%Y-%m-%d" %}
-    {% assign event_date = post.event-date | date: "%Y-%m-%d" %}
+    {% assign event_date = post.event.date | date: "%Y-%m-%d" %}
     {% if curr_date < event_date %}
        {% include carousel_item.html post=post %}
        {% endif %}

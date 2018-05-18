@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign posts = site.posts | where_exp: 'event_date', 'event_date > site.time' %}
+{% assign posts = site.posts | where_exp: 'event', 'event.date > site.time' %}
 <div class="row header-page m-0">
   <section class="col-md px-0">
     {% include carousel.html %}

@@ -7,7 +7,9 @@ image: /assets/img/2018-05-31-social.jpg
 image_description: Bomberman Blast and Brawlhalla Social
 games: ["Bomberman Blast", "Brawlhalla"]
 categories: weekly-social
-event-date: 2018-05-31
+event:
+  date: 2018-05-31
+  location: Huttons Bar
 ---
 
 We'll be playing a classic this week: Bomberman Blast on the Wii; on the side, we'll have the fun fighting game Brawlhalla. If you've never heard of it, check it out: https://www.youtube.com/watch?v=baixpNzE9es

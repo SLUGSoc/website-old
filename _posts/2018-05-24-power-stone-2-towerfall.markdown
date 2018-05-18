@@ -6,7 +6,9 @@ image: /assets/img/2018-05-24-social.jpg
 image_description: Power Stone 2 and Towerfall Social
 games: ["Power Stone 2", "Towerfall Ascension"]
 categories: weekly-social
-event-date: 2018-05-24
+event:
+  date: 2018-05-24
+  location: Huttons Bar
 ---
 
 This week we'll be playing the classic Dreamcast game Power Stone 2, the multiplayer fighting game that has a wide variety of pick-up items to use, as well as Towerfall!

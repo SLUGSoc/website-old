@@ -1,6 +1,6 @@
 {% assign curr_date = site.time | date: '%s' %}
 {% assign post = include.category.first %}
-{% assign date = post.event-date | date: '%s' %}
+{% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
 <div class="d-flex">
   <h3 class="w-100">Next {{include.type}}</h3>
