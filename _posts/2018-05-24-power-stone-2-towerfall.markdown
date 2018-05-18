@@ -7,7 +7,7 @@ image_description: Power Stone 2 and Towerfall Social
 games: ["Power Stone 2", "Towerfall Ascension"]
 categories: weekly-social
 event:
-  date: 2018-05-24
+  date: 2018-05-24 19:00
   location: Huttons Bar
 ---
 

@@ -8,7 +8,7 @@ image_description: Bomberman Blast and Brawlhalla Social
 games: ["Bomberman Blast", "Brawlhalla"]
 categories: weekly-social
 event:
-  date: 2018-05-31
+  date: 2018-05-31 19:30
   location: Huttons Bar
 ---
 

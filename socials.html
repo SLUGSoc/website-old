@@ -8,13 +8,15 @@ layout: default
       <thead>
         <tr>
           <th class="text-center">Week</th>
+          <th class="text-center">Location</th>
           <th class="text-center">Game</th>
         </tr>
       </thead>
       <tbody>
         {% for post in site.categories.weekly-social %}
         <tr>
-          <td class="text-center">{{post.event-date | date: "%a, %b %d"}}</td>
+          <td class="text-center">{{post.event.date | date: "%a, %b %d %l:%M %P"}}</td>
+          <td class="text-center">{{post.event.location }}</td>
           <td class="text-center">
             <ul class="list-unstyled">
               {% for game in post.games %}

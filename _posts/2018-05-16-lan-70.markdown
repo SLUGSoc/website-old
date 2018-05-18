@@ -7,7 +7,7 @@ image: https://images4.alphacoders.com/538/thumb-1920-53838.jpg
 image_description: Another placeholder image
 categories: lan
 event:
-  date: 2018-06-08
+  date: 2018-06-08 21:30
   location: The Ridge at Ranmoor
 ---
 

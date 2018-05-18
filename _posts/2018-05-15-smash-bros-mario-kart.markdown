@@ -8,9 +8,8 @@ image_description: Another placeholder image
 games: ["Super Smash Bros. for Wii U", "Mario Kart 8 Deluxe"]
 categories: weekly-social
 event:
-  date: 2018-05-20
-  time: 7pm
-  location: 7pm
+  date: 2018-05-20 19:00
+  location: Huttons Bar
 ---
 
 Blurb for this week's social.
