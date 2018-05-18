@@ -29,7 +29,7 @@ layout: default
           <tbody>
             {% for post in site.categories.weekly-social limit: 3 %}
             <tr>
-              <td class="text-center">{{post.event-date | date: "%a, %b %d"}}</td>
+              <td class="text-center">{{post.event.date | date: "%a, %b %d"}}</td>
               <td class="text-center">
                 <ul class="list-unstyled">
                   {% for game in post.games %}
@@ -66,7 +66,7 @@ layout: default
           <tbody>
             {% for post in site.categories.lan limit: 3 %}
             <tr>
-              <td class="text-center">{{post.event-date | date: "%a, %b %d"}}</td>
+              <td class="text-center">{{post.event.date | date: "%a, %b %d"}}</td>
               <td class="text-center">
                 <ul class="list-unstyled">
                   {{ post.title }}
@@ -181,11 +181,4 @@ layout: default
   <!-- /.container -->
 
 
-  <!-- FOOTER -->
-  <footer class="bg-dark text-light">
-    <div class="container">
-      <p class="float-right"><a class="text-light" href="#">Back to top</a></p>
-      <p>&copy; 2017-2018 SLUGSoc</p>
-    </div>
-  </footer>
 

@@ -21,3 +21,9 @@
   color: dreamcast
 - name: Wii
   color: wii
+- name: Discord
+  color: discord
+  icon: discord
+- name: Steam
+  color: steam
+  icon: steam
