@@ -3,7 +3,14 @@ layout: default
 ---
 <div class="container py-5">
   <h1>Our Committee</h1>
-{% for member in site.data.committee %}
-{% include personal_profile.html member=member %}
-{% endfor %}
+  {% for member in site.data.committee %}
+  {% assign mod = forloop.index | modulo: 2 %}
+  {% if mod != 0 %}
+  <div class="card-deck">
+  {% endif %}
+  {% include personal_profile.html member=member %}
+  {% if mod == 0 %}
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
