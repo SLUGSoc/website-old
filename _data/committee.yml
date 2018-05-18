@@ -1,0 +1,85 @@
+- name: Simon
+  alias: Kotori
+  role: Tech Officer
+  image: /assets/img/committee18.jpg
+  id:
+    steam: Kotorious B.R.D.
+    discord: Kotori#2945
+    nintendo: SLUGS☆ことり
+  blurb: Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!
+- name: Jimmez
+  alias: Aterfax
+  role: Treasurer
+  image: 
+  id:
+    steam: Aterfax
+    discord:
+  blurb: Currently doing a PhD at the Uni, previously done most of the roles from tech to sec. Being the money boss for this year, so if you have ideas for how to make or spend money for the society's benefit, give me a bell. You'll see me at LANs and socials with the money box. Mainly play FPS, RTS or Star Wars / Mil themed games.
+- name: Marine
+  alias: SkywardWind
+  role: Social Secretary
+  image: 
+  id:
+    steam: SkywardWind
+    discord: SkywardWind
+  blurb: Hi, I'm Marine and I'm SLUGSoc's Social Secretary. I plan out our various events, and organise weekly socials with the console officer. If you want to do anything with the society, talk to me! I play Zelda, Overwatch, Hearthstone, and obscure point & click games. I work in marketing at an online video game retailer, and I like things to be organised and pretty.
+- name: Ashleigh
+  alias: Ginger
+  role: Secretary
+  image: 
+  id:
+    steam:
+    discord:
+  blurb: 
+- name: Jamie
+  alias: Annoytanor
+  role: President
+  image: 
+  id:
+    steam: Annoytanor
+    discord:
+  blurb: 
+- name: Tom
+  alias: Credible Threat[TM]
+  role: President
+  image: 
+  id:
+    steam: Annoytanor
+    discord:
+  blurb: 
+- name: Laura
+  alias: Lauriestar
+  role: Inclusions Officer
+  image: 
+  id:
+    steam: Lauriestar
+    discord: Laura
+    nintendo: Lauriestar
+  blurb: 
+- name: Rebecca
+  alias:
+  role: Tech Officer
+  image: 
+  id:
+    steam:
+    discord:
+    nintendo:
+  blurb: 
+- name: Greg
+  alias: Gregregorovich
+  role: Senior Tech Officer
+  image: 
+  id:
+    steam:
+    discord:
+    nintendo:
+  blurb: 
+- name: Eric
+  alias: Chintam
+  role: Senior Tech Officer
+  image: 
+  id:
+    steam:
+    discord:
+    nintendo:
+  blurb: 

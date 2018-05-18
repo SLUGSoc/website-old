@@ -15,7 +15,7 @@
         {% for game in include.post.games %}
         {% assign game_entry = site.data.games | where: "title", game | first %}
         {% assign platform = site.data.platforms | where: "name", game_entry.platform | first %}
-        <li class="list-inline-item">
+        <li class="list-inline-item d-inline">
           {{ game }} 
           {% if game_entry and platform %}
           <span class="badge badge-pill badge-{{ platform.color | default: 'secondary' }}">
