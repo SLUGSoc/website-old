@@ -2,13 +2,28 @@
 {% assign post = include.category.first %}
 {% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
-<div class="d-flex">
-  <h3 class="w-100">Next {{include.type}}</h3>
-  <a class="btn h2 btn-light mx-3 w-100" href="{{ post.url }}">
-    <span>{{ post.title}}</span>
-  </a>
+<div class="card text-shadowed mb-2">
+  <div class="card-img" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100px; width: auto;">
+    <div class="card-header text-uppercase">
+      {{ include.type }}
+      <small>{{ post.event.date | date: "%-d %B %-I:%M%p"}}</small>
+    </div>
+    <div class="card-img-overlay">
+      <div class="card-title pt-3">
+        <span class="fa-2x">
+          <span class="fa-layers fa-fw">
+            <i class="fas fa-calendar"></i>
+            <span class="fa-layers-text" data-fa-transform="shrink-8 down-3" style="color: black; text-shadow: none; font-weight:900">{{ post.event.date | date: "%d"}}</span>
+          </span>
+        </span>
+        <h4 class="d-inline p-1">
+          {{ post.title }}
+        </h4>
+
+      </div>
+    </div>
+  </div>
 </div>
-{% include glance_event.html post=post %}
 {% else %}
 <p class="text-center">Details coming soon!</p>
 {% endif %}

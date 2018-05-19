@@ -3,11 +3,12 @@ layout: default
 ---
 {% assign posts = site.posts | where_exp: 'event', 'event.date > site.time' %}
 <div class="row header-page m-0">
-  <section class="col-md px-0">
+  <section class="col-md d-none d-md-block px-0">
     {% include carousel.html %}
   </section>
-  <section class="col-md bg-dark text-light" style="max-height: 92vh; overflow: auto;">
+  <section class="col-md bg-dark text-light" style="min-height: 92vh;">
     <div class="container py-3">
+      <img class="img-fluid d-block d-md-none mx-auto mb-3" src="https://placehold.it/300" alt="" style="min-height: 35vh;"/>
       <h2>Welcome to SLUGSoc!</h2>
       <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
       <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
