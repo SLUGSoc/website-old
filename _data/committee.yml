@@ -63,8 +63,10 @@
   image: /assets/img/committee18.jpg
   id:
     steam: Kotorious B.R.D.
+    steam64: 76561198087013663
     discord: Kotori#2945
     nintendo: SLUGS☆ことり
+    nintendo_friend_code: 1234-5768-9101
     battlenet: UndyingFish#2388
   blurb: Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!
 - name: Tom

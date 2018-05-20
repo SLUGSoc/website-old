@@ -32,6 +32,7 @@ include-yarn-deps:
 	cp node_modules/popper.js/dist/umd/popper.min.js $(VENDOR_DIR)
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js $(VENDOR_DIR)
 	cp node_modules/jquery-scrollify/jquery.scrollify.js $(VENDOR_DIR)
+	cp node_modules/clipboard/dist/clipboard.min.js $(VENDOR_DIR)
 
 build: install include-yarn-deps
 	$(JEKYLL) build

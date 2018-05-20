@@ -11,16 +11,16 @@
         <div class="col">
           <h4 style="line-height: 130%;">
             {% if member.id.discord %}
-            {% include tag.html id=member.id.discord style="Discord" %}
+            {% include tag.html ids=member.id id=member.id.discord style="Discord" %}
             {% endif %}
             {% if member.id.nintendo %}
-            {% include tag.html id=member.id.nintendo style="Nintendo Switch" %}
+            {% include tag.html ids=member.id id=member.id.nintendo style="Nintendo Switch" %}
             {% endif %}
             {% if member.id.steam %}
-            {% include tag.html id=member.id.steam style="Steam" %}
+            {% include tag.html ids=member.id id=member.id.steam style="Steam" %}
             {% endif %}
             {% if member.id.battlenet %}
-            {% include tag.html id=member.id.battlenet style="Battle.net" %}
+            {% include tag.html ids=member.id id=member.id.battlenet style="Battle.net" %}
             {% endif %}
           </h4>
         </div>

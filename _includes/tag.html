@@ -1,5 +1,18 @@
 {% assign style=site.data.platforms | where: "name", include.style | first %}
-<span class="badge badge-pill badge-{{ style.color }}" data-toggle="tooltip" data-placement="left" title="{{ style.name }}">
+{% capture steam_link %}
+https://steamcommunity.com/profiles/{{ include.ids.steam64 }}
+{% endcapture %}
+{% if style.name == "Steam" and include.ids.steam64 %}
+<a href="{{ steam_link}}" target="_blank">
+{% endif %}
+<span class="badge badge-pill badge-{{ style.color }}" 
+      data-toggle="tooltip" 
+      data-placement="left" 
+      title="{{ style.name }}" 
+      data-clipboard-text="{% if style.name == 'Nintendo Switch' %}{{ include.ids.nintendo_friend_code | default: include.id }}{% else %}{{ include.id }}{% endif %}">
   <i class="fa-fw {{ style.icon}}"></i>
   {{ include.id }}
 </span>
+{% if style.name == "Steam" %}
+</a>
+{% endif %}
