@@ -19,6 +19,7 @@
   role: Treasurer
   id:
     steam: Aterfax
+    steam64: 76561193700794003
     discord: Aterfax#0661
   blurb: Currently doing a PhD at the Uni, previously done most of the roles from tech to sec. Being the money boss for this year, so if you have ideas for how to make or spend money for the society's benefit, give me a bell. You'll see me at LANs and socials with the money box. Mainly play FPS, RTS or Star Wars / Mil themed games.
 - name: Marine
@@ -26,6 +27,7 @@
   role: Social Secretary
   id:
     steam: SkywardWind
+    steam64: 76561193817933206
     discord: SkywardWind#9684
   blurb: Hi, I'm Marine and I'm SLUGSoc's Social Secretary. I plan out our various events, and organise weekly socials with the console officer. If you want to do anything with the society, talk to me! I play Zelda, Overwatch, Hearthstone, and obscure point & click games. I work in marketing at an online video game retailer, and I like things to be organised and pretty.
 - name: Bobby
@@ -43,6 +45,10 @@
 - name: Charlie
   role: Food Officer
 - name: Phil
+  alias: PDeegz
+  id:
+    discord: PDeegz#3764
+    steam: PDeegz#2393
   role: Esports Officer
   blurb: Hi, I’m Phil! As esports officer I’m responsible for handling all tasks related to esports, such as making sure competitions such as NUEL and others go smoothly, arranging ways for people to engage with esports such as viewing parties, and generally increasing awareness of what’s going on in the esports world. I play, well… mainly just Hearthstone, where I go by PDeegz, but I follow pretty much every esport to at least some degree. I’m nearly always around, so feel free to come talk to me about esports or anything else.
   id:
@@ -52,6 +58,8 @@
   role: Senior Tech Officer
   id:
     discord: '"Chip" Gregregorovich#8603'
+    steam: Gregregorovich
+    steam64: 76561193769592749
 - name: Eric
   alias: Chintam
   role: Senior Tech Officer
