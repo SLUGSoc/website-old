@@ -72,7 +72,7 @@
     steam64: 76561198087013663
     discord: Kotori#2945
     nintendo: SLUGS☆ことり
-    nintendo_friend_code: 1234-5768-9101
+    nintendo_friend_code: SW-8581-9657-8005
     battlenet: UndyingFish#2388
   blurb: Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!
 - name: Tom
@@ -80,6 +80,8 @@
   role: Tech Officer
   id:
     discord: Dr House#4064
+    steam64: 76561198046558878
+    steam: Credible Threat™
   blurb: Currently a 2nd year undergraduate studying Chemical Engineering. My responsibilities as assistant tech primarily include assisting the senior techs in setting up and running the LAN, gaining knowledge about SLUGs specific stuff such as the gateway and website so that I can help maintain and upgrade them. You will find me playing a wide variety of games including FPS, RTS, sandbox, Star Wars games, etc.
 - name: Fred
   alias: RaptureAwaits
@@ -88,3 +90,5 @@
     discord: RaptureAwaits#7905
 - name: Rebecca
   role: Tech Officer
+  alias: Fudgecake34
+  blurb: Hi, I'm Becca! Im currently a third year Computer Science with AI student. My favourite type of games are puzzle based games like Portal and Talos Principal. I'm always up for some TF2 though! As one of the tech roles I'll be mainly helping out at LANs, so hope to see you there!
