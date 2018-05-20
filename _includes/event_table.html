@@ -1,0 +1,11 @@
+{% assign posts = include.category | reverse %}
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+{% assign loopcounter = 0 %}
+{% assign limit = include.limit %}
+{% for post in posts %}
+  {% capture posttime %}{{ post.event.date | date: '%s'}}{% endcapture %}
+  {% if (posttime > nowunix) and (loopcounter < limit) %}
+    {% assign loopcounter = loopcounter | plus: 1 %}
+    {% include event_table_entry.html post=post %}
+  {% endif %}
+{% endfor %}

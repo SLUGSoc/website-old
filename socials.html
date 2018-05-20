@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
 <div class="row pt-3 bg-dark text-light mx-0">
   <div class="col-md-8">
     <div class="container">
@@ -16,6 +17,8 @@ layout: default
           </thead>
           <tbody>
             {% for post in site.categories.weekly-social %}
+            {% capture posttime %}{{ post.event.date | date: '%s'}}{% endcapture %}
+            {% if posttime > nowunix %}
             <tr onclick="window.location='{{post.url}}';">
               <td class="text-center">{{post.event.date | date: "%a, %b %d %l:%M %P"}}</td>
               <td class="text-center">{{post.event.location }}</td>
@@ -39,6 +42,7 @@ layout: default
                 </ul>
               </td>
             </tr>
+            {% endif %}
             {% endfor %}
           </tbody>
         </table>

@@ -28,30 +28,7 @@ layout: default
         <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
         <table class="table table-sm table-hover">
           <tbody>
-            {% for post in site.categories.weekly-social limit: 3 %}
-            <tr onclick="window.location='{{post.url}}';">
-              <td class="text-center">{{post.event.date | date: "%a, %b %d"}}</td>
-              <td class="text-center">
-                <ul class="list-unstyled">
-                  {% for game in post.games %}
-                  {% assign game_entry = site.data.games | where: "title", game | first %}
-                  {% assign platform = site.data.platforms | where: "name", game_entry.platform | first %}
-                  <li>
-                    {{ game }} 
-                    {% if game_entry and platform %}
-                    <span class="badge badge-pill badge-{{ platform.color | default: 'secondary' }}">
-                      {% if platform.icon %}
-                      <i class="fab fa-{{platform.icon}}"></i>
-                      {% endif %}
-                      {{ platform.name }}
-                    </span>
-                    {% endif %}
-                  </li>
-                  {% endfor %}
-                </ul>
-              </td>
-            </tr>
-            {% endfor %}
+            {% include event_table.html category=site.categories.weekly-social limit=3 %}
           </tbody>
         </table>
         <p>
@@ -65,16 +42,7 @@ layout: default
         <p>
         <table class="table table-sm table-hover">
           <tbody>
-            {% for post in site.categories.lan limit: 3 %}
-            <tr onclick="window.location='{{post.url}}';">
-              <td class="text-center">{{post.event.date | date: "%a, %b %d"}}</td>
-              <td class="text-center">
-                <ul class="list-unstyled">
-                  {{ post.title }}
-                </ul>
-              </td>
-            </tr>
-            {% endfor %}
+            {% include event_table.html category=site.categories.lan limit=3 %}
           </tbody>
         </table>
         {% include button.html style="secondary" class="w-100" href="#" text="View details &raquo;" %}
