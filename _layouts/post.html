@@ -2,6 +2,7 @@
 layout: default
 ---
 <div class="row m-0 bg-primary">
+  {% if page.image %}
   <div class="col-md p-0">
     <div class="card m-3">
       <img class="card-img-top" src="{{ page.image}}" alt="" />
@@ -9,22 +10,41 @@ layout: default
         <h1>{{ page.title }}</h1>
         <ul class="list-inline">
           <li class="list-inline-item align-middle">
-            <i class="fas fa-2x fa-gamepad"></i>
+            <i class="fas fa-calendar"></i> {{ page.event.date | date: "%A, %B %d" }}
+          </li>
+          <li class="list-inline-item align-middle">
+            <i class="fas fa-clock"></i> {{ page.event.date | date: "%-I:%M%p" }}
+          </li>
+          <li class="list-inline-item align-middle">
+            <i class="fas fa-map-marker"></i> {{ page.event.location }}
+          </li>
+        </ul>
+        
+        {% if page.games %}
+        <ul class="list-inline">
+          <li class="list-inline-item align-middle">
+            <i class="fas fa-gamepad"></i>
           </li>
           {% for game in page.games %}
             {% assign game_entry = site.data.games | where: 'title', game | first %}
             {% assign platform = site.data.platforms | where: 'name', game_entry.platform | first %}
             <li class="list-inline-item align-middle">
+              {% if game_entry and platform %}
               <span class="badge badge-pill badge-{{ platform.color }}">
                 <i class="{{ platform.icon }}"></i>
+              {% endif %}
                 {{ game }}
+              {% if game_entry and platform %}
               </span>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>
+        {% endif %}
       </div>   
     </div>
   </div>
+  {% endif %}
   <div class="col-md p-0 m-0">
     <div class="container my-3 text-light">
       <h1>{{ page.title }}</h1>

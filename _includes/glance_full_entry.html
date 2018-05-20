@@ -4,7 +4,7 @@
 {% if date > curr_date %}
 <a href="{{ post.url }}">
   <div class="card text-shadowed mb-2">
-    <div class="card-img" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100px; width: auto;">
+    <div class="card-img" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100px;">
       <div class="card-header text-uppercase">
         {{ include.type }}
         <small>{{ post.event.date | date: "%-d %B %-I:%M%p"}}</small>
