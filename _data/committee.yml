@@ -3,6 +3,7 @@
   role: President
   id:
     steam: Annoytanor
+    steam64: 76561198049819756
     discord: annoytanor#4668
     battlenet: Annoytanor#2471
   blurb: "*dabs* how do you do, fellow kids. I'm Jamie. I do computer science with AI and I play games like Battlefield 4, Bf1, Overwatch, minecraft, stellaris, random indie building games D:, PUBG and other things. I usually go by Annoytanor or Annoytanor007 when some f*cker steals my name >:( I'm the president somehow and I do things. If you've got any feedback or ideas hit me up like a coke bitch and I'll tell the relevant peeps and get the ball rolling. I also like anime."
@@ -11,6 +12,7 @@
   role: Inclusions Officer
   id:
     steam: Lauriestar
+    steam64: 76561198026128010
     discord: Laura#7175
     nintendo: Lauriestar
   blurb: Hey, I’m Laura! I’m the Inclusions Officer for SLUGSoc, so my goal is to make sure everyone feels welcome in the society. If you feel nervous showing up to your first event, feel free to contact me through FB or university e-mail, and I’ll be happy to introduce you to everyone! I’m currently a PhD student, and my favourite games are anything Nintendo, Stardew Valley, and some Overwatch/League of Legends thrown in. If you ever want someone to play games with, or just to have a chat, feel free to message me anytime.
@@ -39,11 +41,17 @@
 - name: Ashleigh
   alias: Verglas/El Gingerino
   role: Secretary
+  id:
+    steam: Verglas
+    steam64: 76561198098279318
   blurb: Hi, I'm Ash and I'm the Secretary for SLUGS. My job is to deal with all the correspondence for the society and all the admin stuff. I mainly play open-world adventure games (The Witcher 3 is my jam) or smaller indie games like The Binding of Isaac. I study Biochemistry and Genetics at UoS so if you need help with your biology homework or want to play some Don't Starve then send me a message!
 - name: Matt
   role: Console Officer
 - name: Charlie
   role: Food Officer
+  id:
+    steam: Belf
+    steam64: 76561198030000141
 - name: Phil
   alias: PDeegzyWeegy
   id:
@@ -91,4 +99,8 @@
 - name: Rebecca
   role: Tech Officer
   alias: Fudgecake34
+  id:
+    steam64: 76561198177918570
+    steam: fudgecake34
+    discord: Fudgecake34#5477
   blurb: Hi, I'm Becca! Im currently a third year Computer Science with AI student. My favourite type of games are puzzle based games like Portal and Talos Principal. I'm always up for some TF2 though! As one of the tech roles I'll be mainly helping out at LANs, so hope to see you there!
