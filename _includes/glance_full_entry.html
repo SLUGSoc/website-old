@@ -2,14 +2,12 @@
 {% assign post = include.category.first %}
 {% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
-<a href="{{ post.url }}">
-  <div class="card text-shadowed mb-2">
-    <div class="card-img" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; height: 100px;">
+<a class="mb-3" href="{{ post.url }}" style="flex: 1; height: 100%;">
+  <div class="card text-shadowed" style="min-height: 100px; flex: inherit; height: 100%;">
+    <div class="card-img" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; min-height: 100px; height: inherit;">
       <div class="card-header text-uppercase">
-        {{ include.type }}
-        <small>{{ post.event.date | date: "%-d %B %-I:%M%p"}}</small>
       </div>
-      <div class="card-img-overlay">
+      <div class="card-img-overlay d-flex flex-column justify-content-center">
         <div class="card-title pt-3">
           <span class="fa-2x">
             <span class="fa-layers fa-fw">
@@ -18,8 +16,11 @@
             </span>
           </span>
           <h4 class="d-inline p-1">
-            {{ post.title }}
+            {{ include.type }} | {{ post.title }}
           </h4>
+          <h5 class="rounded d-inline-block mx-auto p-1 text-center">
+            {{ post.event.date | date: "%-d %B %-I:%M%p"}}, {{ post.event.location }}
+          </h5>
 
         </div>
       </div>
