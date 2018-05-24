@@ -1,0 +1,17 @@
+<div class="accordion" id="lanRulesAccordion">
+  {% for rule in site.data.lan_rules %}
+  <div class="card">
+    <div class="card-header" id="heading{{ forloop.index }}">
+      <h5 class="mb-0">
+        <a class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% endif %}" aria-controls="collapse{{ forloop.index }}">
+          <span><i class="fa fa-fw {{ rule.icon }}"></i>{{ rule.summary }}</span>
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapse{{ forloop.index }}" class="collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.index }}" data-parent="#lanRulesAccordion">
+      <div class="card-body">{{ rule.content }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

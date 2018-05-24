@@ -1,0 +1,12 @@
+- summary: Do not bring extension leads.
+  content: Please do not bring extension leads, as our power network is very carefully worked out so that we don't short out the venue or cause a fire! We provide everyone with two power sockets (one for a monitor and one for a PC/console), so you shouldn't need one.
+  icon: fas fa-bolt
+- summary: Alcohol and drugs are not permitted.
+  content: Alcohol and other intoxicating substances are not permitted, partly as we are not using a licensed venue.
+  icon: fas fa-beer
+- summary: Do not attend while intoxicated.
+  content: Do not enter the event while intoxicated/under the influence of alcohol or drugs.
+  icon: fas fa-vial
+- summary: Be respectful.
+  content: Respect other attendees both inside and out of games. Abuse of any form is not tolerated and comes with consequences.
+  icon: fas fa-hands-helping
