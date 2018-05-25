@@ -7,27 +7,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link text-center" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link text-center" href="/">At a glance </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          About
-        </a>
-        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-light" href="/socials.html">Socials</a>
-          <a class="dropdown-item text-light" href="#">LAN Events</a>
-          <a class="dropdown-item text-light" href="#">Competitive Gaming</a>
-          <a class="dropdown-item text-light" href="#">Game Servers</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-light" href="/committee.html">Our Committee</a>
-          <a class="dropdown-item text-light" href="#">Getting Involved</a>
-          <a class="dropdown-item text-light" href="#">About LANs</a>
-        </div>
-      </li>
+      {% for item in site.data.nav %}
+      <li class="nav-item {% if item.url == page.url %}active{% endif %}"><a class="nav-link text-center" href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
+      {% endfor %}
     </ul>
     <ul class="navbar-nav ml-auto text-center">
       <form class="form-inline mr-3">
@@ -58,11 +40,17 @@
       </form>
       {% assign curr_date = site.time | date: '%s' %}
       {% assign lan_post = site.categories.lan.first %}
-      {% assign lan_date = lan_post.event-date | date: '%s' %}
+      {% assign lan_date = lan_post.event.date | date: '%s' %}
       {% if lan_date > curr_date %}
       <li class="nav-item">
-        <a class=" btn btn-light" href="{{ site.categories.lan.first.url }}">
-          <span>{{ site.categories.lan.first.title}}</span>
+        <a class=" btn btn-light" href="{{ lan_post.url }}">
+          <span class="fa-layers fa-fw">
+            <i class="fas fa-desktop"></i>
+            <span class="fa-layers-text" data-fa-transform="shrink-5" style="font-weight:900">{{ lan_post.title | replace: "Announcing LAN ", "" }}</span>
+          </span>
+          <span class="expand-text">
+            <span>{{ lan_post.title | replace: "Announcing ", ""}}</span>
+          </span>
         </a>
       </li>
       {% endif %}

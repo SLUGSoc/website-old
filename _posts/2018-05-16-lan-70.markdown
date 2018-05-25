@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Announcing LAN 70!"
+title: "Announcing LAN 70"
 summary: Sign off another year of university with LAN 70!
 prompt: Test Prompt
 image: https://images4.alphacoders.com/538/thumb-1920-53838.jpg
