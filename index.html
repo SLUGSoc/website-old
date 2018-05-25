@@ -2,25 +2,26 @@
 layout: default
 ---
 {% assign posts = site.posts | where_exp: 'event', 'event.date > site.time' %}
-<div class="row header-page m-0">
-  <section class="col-md d-none d-md-block px-0">
-    {% include carousel.html %}
-  </section>
-  <section class="col-md bg-dark text-light" style="height: 92vh;">
-    <div class="container py-3 d-flex flex-column" style="height: 100%;">
-      <img class="img-fluid d-block d-md-none mx-auto mb-3" src="https://placehold.it/300" style="flex: 1;"/>
-      <h2>Welcome to SLUGSoc!</h2>
-      <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
-      <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
-      <div class="d-flex flex-column" style="height:100%;" style="flex: 1;">
-        {% include glance_full_entry.html type="Social" category=site.categories.weekly-social %}
-        {% include glance_full_entry.html type="LAN" category=site.categories.lan %}
+<section>
+  <div class="row no-gutters">
+    <div class="col-md d-none d-md-block">
+      {% include carousel.html %}
+    </div>
+    <div class="col-md p-3 bg-dark text-light" style="height: 92vh;">
+      <div class="d-flex flex-column" style="height: 100%;">
+        <img class="img-fluid d-block d-md-none mx-auto mb-3" src="https://placehold.it/300" style="flex: 1;"/>
+        <h2>Welcome to SLUGSoc!</h2>
+        <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
+        <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
+        <div class="d-flex flex-column" style="height:100%;" style="flex: 1;">
+          {% include glance_full_entry.html type="Social" category=site.categories.weekly-social %}
+          {% include glance_full_entry.html type="LAN" category=site.categories.lan %}
+        </div>
       </div>
     </div>
-  </section>
-</div>
+  </div>
 </section>
-<section id="summary" class="snap-point bg-dark text-light">
+<section id="summary" class="bg-dark text-light">
   <div class="container">
     <div class="row pt-5">
       <div class="col">
@@ -35,7 +36,7 @@ layout: default
         <p>
         {% include button.html style="secondary" class="w-100" href="/socials.html" text="View details &raquo;" %}
         </p>
-      </div><!-- /.col-lg-4 -->
+      </div>
       <div class="col">
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>LAN events</h2>
@@ -82,73 +83,46 @@ layout: default
     </div>
   </div>
 </section>
-
-
-
-<!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <section class="snap-point">
-    <div class="container marketing mt-5">
-
-      <!-- Three columns of text below the carousel -->
-      <!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Our committee <span class="text-muted">loves games!</span></h2>
-          <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
-          {% include button.html style="primary" class="btn-lg w-100 mb-3" href="/committee.html" text="Learn more &raquo;" %}
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
-        </div>
+<section>
+  <div class="container mt-5">
+    <hr>
+    <div class="row">
+      <div class="col-md-7">
+        <h2>Our committee <span class="text-muted">loves games!</span></h2>
+        <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
+        {% include button.html style="primary" class="btn-lg w-100 mb-3" href="/committee.html" text="Learn more &raquo;" %}
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
-          <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
-          {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
-          <div class="btn-group d-flex mb-3">
-            {% include button.html style='primary' class="btn-lg w-100 mb-3" href="#" text="Join SLUGS &raquo;" %}
-            {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server &raquo;' icon='fab fa-discord' %}
-          </div>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
-        </div>
+      <div class="col-md-5">
+        <img class="img-fluid mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading"><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
-          <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
-          <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
-          {% include button.html style="primary" class="btn-lg w-100 mb-3" href="#" text="About SLUGS LAN events &raquo;" %}
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
     </div>
-  </section>
-  <!-- /.container -->
-
-
-
+    <hr>
+    <div class="row">
+      <div class="col-md-7 order-md-2">
+        <h2>Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
+        <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
+        {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
+        <div class="btn-group d-flex mb-3">
+          {% include button.html style='primary' class="btn-lg w-100 mb-3" href="#" text="Join SLUGS &raquo;" %}
+          {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server &raquo;' icon='fab fa-discord' %}
+        </div>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-7">
+        <h2><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
+        <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
+        <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
+        {% include button.html style="primary" class="btn-lg w-100 mb-3" href="#" text="About SLUGS LAN events &raquo;" %}
+      </div>
+      <div class="col-md-5">
+        <img class="img-fluid mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>

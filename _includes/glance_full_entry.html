@@ -1,5 +1,7 @@
 {% assign curr_date = site.time | date: '%s' %}
+{% unless post %}
 {% assign post = include.category.first %}
+{% endunless %}
 {% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
 <a class="mb-3" href="{{ post.url }}" style="flex: 1; height: 100%;">
@@ -16,7 +18,7 @@
             </span>
           </span>
           <h4 class="d-inline p-1">
-            {{ include.type }} | {{ post.title }}
+            {% if include.type %}{{ include.type }} | {% endif %}{{ post.title }}
           </h4>
           <h5 class="rounded d-inline-block mx-auto p-1 text-center">
             {{ post.event.date | date: "%-d %B %-I:%M%p"}}, {{ post.event.location }}
