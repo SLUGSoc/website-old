@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    {% include head.html %}
+    <header>
+      {% include nav.html %}
+    </header>
+
+    <main role="main" style="margin-top: {{ site.navbar-height }}px;">
+      <div class="container-fluid px-0">
+        {{ content }}
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    {% include footer.html %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{'/assets/vendor/jquery.min.js' | absolute_url}}"></script>
+    <script src="{{'/assets/vendor/popper.min.js' | absolute_url}}"></script>
+    <script src="{{'/assets/vendor/bootstrap.min.js' | absolute_url}}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <script src="{{'/assets/vendor/clipboard.min.js' | absolute_url}}"></script>
+    <!-- <script src="{{'/assets/vendor/jquery.scrollify.js' | absolute_url}}"></script> -->
+    <script src="{{'/assets/js/main.js' | absolute_url}}"></script>
+  </body>
+</html>
