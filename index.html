@@ -3,11 +3,11 @@ layout: default
 ---
 {% assign posts = site.posts | where_exp: 'event', 'event.date > site.time' %}
 <section>
-  <div class="row no-gutters">
+  <div class="row no-gutters" style="min-height: 92vh;">
     <div class="col-md d-none d-md-block">
       {% include carousel.html %}
     </div>
-    <div class="col-md p-3 bg-dark text-light" style="height: 92vh;">
+    <div class="col-md p-3 bg-dark text-light">
       <div class="d-flex flex-column" style="height: 100%;">
         <img class="img-fluid d-block d-md-none mx-auto mb-3" src="https://placehold.it/300" style="flex: 1;"/>
         <h2>Welcome to SLUGSoc!</h2>
@@ -23,7 +23,7 @@ layout: default
 </section>
 <section id="summary" class="bg-dark text-light">
   <div class="container">
-    <div class="row pt-5">
+    <div class="row pt-3">
       <div class="col">
         <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
         <h2>Socials</h2>
