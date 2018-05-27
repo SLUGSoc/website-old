@@ -2,28 +2,27 @@
 layout: default
 ---
 {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-<div class="row pt-3 bg-dark text-light mx-0">
+<div class="row pt-3 mx-0">
   <div class="col-md-8">
     <div class="container">
       <h1>Socials Schedule</h1>
-        {% assign socials = site.categories.weekly-social | reverse %}
-        {% for post in socials %}
-          {% capture posttime %}{{ post.event.date | date: '%s'}}{% endcapture %}
-          {% if posttime > nowunix %}
-            <div class="mb-3">
-              {% include glance_full_entry.html post=post %}
-            </div>
-          {% endif %}
-        {% endfor %}
+      {% assign socials = site.categories.weekly-social | reverse %}
+      {% for post in socials %}
+      {% capture posttime %}{{ post.event.date | date: '%s'}}{% endcapture %}
+      {% if posttime > nowunix %}
+        {% include glance_full_entry.html post=post %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
   <div class="col-md-4">
     <div class="container">
       <h1>About Socials</h1>
       <p>
-        SLUGSoc meets weekly for socials on Tuesdays. We normally host these at Huttons Bar, where we drink, chat and enjoy fun multiplayer games! You can see our socials schedule for the next few weeks here - click on each one to learn more.<br />
-        Over the holidays, we might even run unofficial socials - you'll see those listed here too. If you're just getting started with SLUGS, join us at socials each week to get involved!
+      SLUGSoc meets weekly for socials on Tuesdays. We normally host these at Huttons Bar, where we drink, chat and enjoy fun multiplayer games! You can see our socials schedule for the next few weeks here - click on each one to learn more.<br />
+      Over the holidays, we might even run unofficial socials - you'll see those listed here too. If you're just getting started with SLUGS, join us at socials each week to get involved!
       </p>
     </div>
   </div>
 </div>
+
