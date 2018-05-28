@@ -43,6 +43,9 @@ $headings-font-family: 'Bebas', $font-family-sans-serif;
     :after {
         content: '»';
     }
+    span:after {
+        content: '';
+    }
 }
 
 div.carousel-caption {

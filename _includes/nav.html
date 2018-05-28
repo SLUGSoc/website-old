@@ -43,13 +43,13 @@
       {% assign lan_date = lan_post.event.date | date: '%s' %}
       {% if lan_date > curr_date %}
       <li class="nav-item">
-        <a class=" btn btn-light" href="{{ lan_post.url }}">
-          <span class="fa-layers fa-fw">
-            <i class="fas fa-desktop"></i>
-            <span class="fa-layers-text" data-fa-transform="shrink-5" style="font-weight:900">{{ lan_post.title | replace: "Announcing LAN ", "" }}</span>
-          </span>
-          <span class="expand-text">
-            <span>{{ lan_post.title | replace: "Announcing ", ""}}</span>
+        <a class="btn btn-light" href="{{ lan_post.url }}">
+          <span>
+            LAN
+            <span class="fa-layers fa-fw">
+              <i class="fas fa-desktop" data-fa-transform="grow-2"></i>
+              <span class="fa-layers-text" data-fa-transform="shrink-4" style="font-weight:900">{{ lan_post.event.lan_number }}</span>
+            </span>
           </span>
         </a>
       </li>
