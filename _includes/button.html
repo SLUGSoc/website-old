@@ -3,6 +3,13 @@
     {% if include.icon %}
       <i class="{{ include.icon }}"></i> 
     {% endif %}
-    {{ include.text }}
+    <span
+         {% assign length = include.text.size %}
+         {% if length > 10 and include.icon %}
+         class="d-none d-sm-inline-block"
+         {% endif %}
+         >
+      {{ include.text }}
+    </span>
   </span>
 </a>
