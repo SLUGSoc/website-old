@@ -83,11 +83,11 @@ div.carousel-caption h1 {
     transition: width .2s;
     display: inline-block;
     vertical-align: bottom;
+    overflow: hidden;
 }
 
 .brand-compact.compact {
     width: 0 !important;
-    overflow: hidden;
 }
 section {
   min-height: 90vh;
