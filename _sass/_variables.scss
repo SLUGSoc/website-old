@@ -79,6 +79,19 @@ div.carousel-caption h1 {
   }
 }
 
+.brand-compact {
+    transition:width .2s, margin .2s;
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+}
+
+.brand-compact.compact {
+    max-width:0;
+    width: 0;
+    overflow: hidden;
+    display: inline-block;
+}
 section {
   min-height: 90vh;
 }

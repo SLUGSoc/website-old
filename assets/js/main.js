@@ -2,10 +2,21 @@
 ---
 $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip()
-  new ClipboardJS(':not([data-clipboard-text=""])');
-  // $.scrollify({
-  //   section: '.snap-point',
-  //   offset: -{{ site.navbar-height }},
-  //   setHeights: false
-  // })
+  new ClipboardJS(':not([data-clipboard-text=""])')
+  var elements = $('.sticky-top')
+  elements.stick_in_parent()
+    .on("sticky_kit:stick", function(e) {
+    console.log("has stuck!", e.target);
+    $(e.target)
+        .find('.navbar-brand')
+        .children()
+        .addClass('compact')
+  })
+  .on("sticky_kit:unstick", function(e) {
+    console.log(e.target)
+    $(e.target)
+        .find('.navbar-brand')
+        .children()
+        .removeClass('compact')
+  });
 })
