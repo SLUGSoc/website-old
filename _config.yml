@@ -14,11 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: SLUGSoc | Sheffield University Gaming Society
-email: your-email@example.com
+email: slugsoc@sheffield.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  SLUGSoc is the University of Sheffield Gaming Society. We welcome a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: SLUGSoc
@@ -36,7 +34,6 @@ sass:
     load_paths:
         - _sass
         - node_modules
-navbar-height: 61
 future: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
