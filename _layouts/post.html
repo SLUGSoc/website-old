@@ -7,7 +7,8 @@ layout: default
     <div class="card m-3">
       <img class="card-img-top" src="{{ page.image}}" alt="" />
       <div class="card-body">
-        <h1>{{ page.title }}</h1>
+        <h1 class="d-none d-md-block">{{ page.title }}</h1>
+        <h3 class="d-md-none">{{ page.title }}</h3>
         <ul class="list-inline">
           <li class="list-inline-item align-middle">
             <i class="fas fa-calendar"></i> {{ page.event.date | date: "%A, %B %d" }}
@@ -47,8 +48,25 @@ layout: default
   {% endif %}
   <div class="col-md p-0 m-0">
     <div class="container my-3 text-light">
-      <h1>{{ page.title }}</h1>
+      <h1 class="d-none d-md-block">{{ page.title }}</h1>
       {{ content }}
+      <br />
+      {% if page.event.facebook_link %}
+      <a class="btn btn-facebook w-100 mb-3" href="{{ page.event.facebook_link }}">
+        <span>
+          <i class="fab fa-facebook"></i>
+          View Event on Facebook
+        </span>
+      </a>
+      {% endif %}
+      {% if page.event.ticket_link %}
+      <a class="btn btn-secondary w-100 mb-3" href="{{ page.event.ticket_link }}">
+        <span>
+          <i class="fas fa-ticket-alt"></i>
+          Buy Ticket
+        </span>
+      </a>
+      {% endif %}
     </div>
   </div>
 </div>
