@@ -4,9 +4,11 @@
     {% include head.html %}
   </head>
   <body>
+    {% if page.url == "/" %}
     <div style='height:50vh'>
       
     </div>
+    {% endif %}
     {% include nav.html %}
 
     <main role="main">
