@@ -1,12 +1,31 @@
 - summary: Do not bring extension leads.
   content: Please do not bring extension leads, as our power network is very carefully worked out so that we don't short out the venue or cause a fire! We provide everyone with two power sockets (one for a monitor and one for a PC/console), so you shouldn't need one.
   icon: fas fa-bolt
-- summary: Alcohol and drugs are not permitted.
-  content: Alcohol and other intoxicating substances are not permitted, partly as we are not using a licensed venue.
-  icon: fas fa-beer
-- summary: Do not attend while intoxicated.
-  content: Do not enter the event while intoxicated/under the influence of alcohol or drugs.
-  icon: fas fa-vial
+- summary: Do not do anything illegal.
+  content: Do not engage in illegal activity of any nature - in particular, piracy and consumption of alcohol.
+  icon: fas fa-gavel
+- summary: Only use two power sockets from a SLUGSoc powerstrip.
+  content: Each attendee is allocated two power sockets. Please do not use any more than this.
+  icon: fas fa-plug
+- summary: Do not modify the power or network distribution layout.
+  content: We carefully plan and maintain both the power and network distribution layout in the room in the name of safety. It is important that it does not get modified so that your and others' equipment can operate safely with a stable internet connection.
+  icon: fas fa-power-off
+- summary: Do not use any equipment you do not own without permission.
+  content: Some attendees may sleep or leave their seats at the LAN. Do not use others' equipment without their permission.
+  icon: fas fa-hand-holding
+- summary: Do not leave open top liquid containers on a desk near electrical equipment.
+  content: This is an electrical hazard. Ensure all liquids are contained securely and will not spill if knocked over.
+  icon: fas fa-tint
 - summary: Be respectful.
   content: Respect other attendees both inside and out of games. Abuse of any form is not tolerated and comes with consequences.
   icon: fas fa-hands-helping
+- summary: Stay safe at the LAN.
+  content: |
+    If you injure yourself at the LAN you must tell a committee member.
+    If you have a serious allergy or medical condition, please make the committee aware beforehand.
+    Please observe the emergency exits and corridors and do not block them.
+    Ensure you check in and out of the building with the committee / registration RFID scanner in case of fire.
+  icon: fas exclamation-triangle
+- summary: Leave the area tidy.
+  content: When leaving the LAN, dispose of all waste. In particular, make sure you have all of your gear with you when you leave the event.
+  icon: fas fa-broom
