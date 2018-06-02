@@ -21,7 +21,14 @@
             <i class="d-block fas fa-2x fa-users"></i>
             {% endif %}
             <p class="text-center">{{ include.type }}</p>
+            <span class="fa-2x fa-layers fa-fw">
+              <i class="fas fa-calendar"></i>
+              <span class="fa-layers-text" data-fa-transform="shrink-11 down-4 right-3" style="color: grey; text-shadow: none; font-weight: bold;">{{ post.event.date | date: "%b"}}</span>
+              <span class="fa-layers-text" data-fa-transform="shrink-9 down-4 left-3" style="color: black; text-shadow: none;">{{ post.event.date | date: "%-d"}}</span>
+            </span>
+              <p class="text-center">{{ post.event.date | date: "%-d %b"}}</p>
         </div>
+
         <div class="flex-column">
           <h4 class="flex-grow-1">{{ post.title}}</h4>
           <ul class="fa-ul">
