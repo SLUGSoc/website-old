@@ -11,8 +11,16 @@
     <div class="card-img d-flex" style="background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; min-height: 100px; height: inherit;">
       <div class="card-body d-flex flex-row align-items-center flex-grow-1 text-light text-shadowed">
         <div class="flex-column pr-3 h6">
-          <i class="d-block fas fa-2x fa-gamepad"></i>
-          <p class="text-center">Social</p>
+            {% if include.type == 'Social' %}
+            <i class="d-block fas fa-2x fa-gamepad"></i>
+            {% else if include.type == 'LAN' %}
+            <i class="d-block fas fa-2x fa-desktop"></i>
+            {% else if include.type == 'Meeting' %}
+            <i class="d-block fas fa-2x fa-users"></i>
+            {% else %}
+            <i class="d-block fas fa-2x fa-users"></i>
+            {% endif %}
+            <p class="text-center">{{ include.type }}</p>
         </div>
         <div class="flex-column">
           <h4 class="flex-grow-1">{{ post.title}}</h4>
