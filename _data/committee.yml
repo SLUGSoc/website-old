@@ -6,7 +6,7 @@
     steam64: 76561198049819756
     discord: annoytanor#4668
     battlenet: Annoytanor#2471
-  blurb: "*dabs* how do you do, fellow kids. I'm Jamie. I do computer science with AI and I play games like Battlefield 4, Bf1, Overwatch, minecraft, stellaris, random indie building games D:, PUBG and other things. I usually go by Annoytanor or Annoytanor007 when some f*cker steals my name >:( I'm the president somehow and I do things. If you've got any feedback or ideas hit me up like a coke bitch and I'll tell the relevant peeps and get the ball rolling. I also like anime."
+  blurb: "*dabs* how do you do, fellow kids. I'm Jamie. I do computer science with AI and I play games like Battlefield 4, Bf1, Overwatch, Minecraft, Stellaris, random indie building games, PUBG and other things. I usually go by Annoytanor or Annoytanor007 when some [redacted] steals my name. I'm the president somehow and I do things. If you've got any feedback or ideas hit me up and I'll tell the relevant peeps and get the ball rolling. I also like anime."
 - name: Laura
   alias: Lauriestar
   role: Inclusions Officer
@@ -45,13 +45,6 @@
     steam: Verglas
     steam64: 76561198098279318
   blurb: Hi, I'm Ash and I'm the Secretary for SLUGS. My job is to deal with all the correspondence for the society and all the admin stuff. I mainly play open-world adventure games (The Witcher 3 is my jam) or smaller indie games like The Binding of Isaac. I study Biochemistry and Genetics at UoS so if you need help with your biology homework or want to play some Don't Starve then send me a message!
-- name: Matt
-  role: Console Officer
-- name: Charlie
-  role: Food Officer
-  id:
-    steam: Belf
-    steam64: 76561198030000141
 - name: Phil
   alias: PDeegzyWeegy
   id:
@@ -59,18 +52,6 @@
     battlenet: PDeegz#2393
   role: Esports Officer
   blurb: Hi, I’m Phil! As esports officer I’m responsible for handling all tasks related to esports, such as making sure competitions such as NUEL and others go smoothly, arranging ways for people to engage with esports such as viewing parties, and generally increasing awareness of what’s going on in the esports world. I play, well… mainly just Hearthstone, where I go by PDeegz, but I follow pretty much every esport to at least some degree. I’m nearly always around, so feel free to come talk to me about esports or anything else.
-- name: Greg
-  alias: Gregregorovich
-  role: Senior Tech Officer
-  id:
-    discord: '"Chip" Gregregorovich#8603'
-    steam: Gregregorovich
-    steam64: 76561193769592749
-- name: Eric
-  alias: Chintam
-  role: Senior Tech Officer
-  id:
-    discord: Chintam#0468
 - name: Simon
   alias: Kotori
   role: Tech Officer
@@ -82,7 +63,7 @@
     nintendo: SLUGS☆ことり
     nintendo_friend_code: SW-8581-9657-8005
     battlenet: UndyingFish#2388
-  blurb: Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!
+  blurb: "Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'm mostly responsible for the site you're looking at right now, too, so [check out my site](https://simon.fish) or [the repo](https://github.com/slugsoc/website) to get in touch if you'd like tips! I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!"
 - name: Tom
   alias: Credible Threat™
   role: Tech Officer
@@ -91,11 +72,6 @@
     steam64: 76561198046558878
     steam: Credible Threat™
   blurb: Currently a 2nd year undergraduate studying Chemical Engineering. My responsibilities as assistant tech primarily include assisting the senior techs in setting up and running the LAN, gaining knowledge about SLUGs specific stuff such as the gateway and website so that I can help maintain and upgrade them. You will find me playing a wide variety of games including FPS, RTS, sandbox, Star Wars games, etc.
-- name: Fred
-  alias: RaptureAwaits
-  role: Tech Officer
-  id:
-    discord: RaptureAwaits#7905
 - name: Rebecca
   role: Tech Officer
   alias: Fudgecake34
@@ -105,3 +81,27 @@
     discord: Fudgecake34#5477
     battlenet: Fudgecake34#2508
   blurb: Hi, I'm Becca! Im currently a third year Computer Science with AI student. My favourite type of games are puzzle based games like Portal and Talos Principal. I'm always up for some TF2 though! As one of the tech roles I'll be mainly helping out at LANs, so hope to see you there!
+- name: Greg
+  alias: Gregregorovich
+  role: Senior Tech Officer
+  id:
+    discord: '"Chip" Gregregorovich#8603'
+    steam: Gregregorovich
+    steam64: 76561193769592749
+- name: Fred
+  alias: RaptureAwaits
+  role: Tech Officer
+  id:
+    discord: RaptureAwaits#7905
+- name: Eric
+  alias: Chintam
+  role: Senior Tech Officer
+  id:
+    discord: Chintam#0468
+- name: Matt
+  role: Console Officer
+- name: Charlie
+  role: Food Officer
+  id:
+    steam: Belf
+    steam64: 76561198030000141
