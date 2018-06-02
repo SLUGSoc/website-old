@@ -20,8 +20,10 @@ layout: frontpage
   <div class="container d-flex flex-column py-3" style="flex: 1;">
     <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
     <div class="d-flex" style="flex: 1;">
-      {% include glance_full_entry.html type="Social" category=site.categories.weekly-social %}
-      {% include glance_full_entry.html type="LAN" category=site.categories.lan %}
+      {% include next_social.html category=site.categories.weekly-social %}
+      {% include glance_full_entry.html type="Social" post=most_recent_post %}
+      {% include next_social.html category=site.categories.lan %}
+      {% include glance_full_entry.html type="LAN" post=most_recent_post %}
     </div>
   </div>
 </section>
@@ -92,7 +94,6 @@ layout: frontpage
 </section>
 <section>
   <div class="container mt-5">
-    <hr>
     <div class="row">
       <div class="col-md-7">
         <h2>Our committee <span class="text-muted">loves games!</span></h2>

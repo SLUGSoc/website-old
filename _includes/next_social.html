@@ -1,0 +1,19 @@
+{% assign category = include.category | reverse %}
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+<!-- <table> -->
+  {% for post in category %}
+  <!-- <tr> -->
+    <!-- <td>{{ post.title }}</td> -->
+    <!-- <td>{{ post.date }}</td> -->
+    <!-- <td>{{ post.event.date }}</td> -->
+  <!-- </tr> -->
+  {% assign date = post.event.date | date: '%s' %}
+  {% if date > nowunix %}
+  <!-- <tr> -->
+  <!--   <td colspan=3>{{ post.title }} is the next social</td> -->
+  <!-- </tr> -->
+  {% assign most_recent_post=post %}
+  {% break %}
+  {% endif %}
+  {% endfor %}
+<!-- </table> -->
