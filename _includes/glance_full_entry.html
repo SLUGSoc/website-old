@@ -44,12 +44,19 @@
       </div>
     </a>
     </div>
-    {% if post.event.facebook_link %}
-    <a href="{{ post.event.facebook_link }}" class="text-light">
-      <div class="card-footer bg-facebook">
-        <i class="fab fa-facebook"></i> View Facebook Event
+    {% if post.event.facebook_link or post.event.ticket_link %}
+      <div class="card-footer row no-gutters p-0">
+        {% if post.event.facebook_link %}
+        <a href="{{ post.event.facebook_link }}" class="col text-light bg-facebook p-1 text-center py-auto">
+          <i class="fab fa-facebook"></i> View Facebook Event
+        </a>
+        {% endif %}
+        {% if post.event.ticket_link %}
+        <a href="{{ post.event.ticket_link }}" class="col text-light bg-danger p-1 text-center py-auto">
+          <i class="fas fa-ticket-alt"></i> Buy Ticket
+        </a>
+        {% endif %}
       </div>
-    </a>
     {% endif %}
   </div>
 </a>
