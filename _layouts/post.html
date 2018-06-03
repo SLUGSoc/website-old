@@ -49,7 +49,7 @@ layout: default
   <div class="col-md p-0 m-0">
     <div class="container my-3 text-light">
       <h1 class="d-none d-md-block">{{ page.title }}</h1>
-      {{ content }}
+      {{ content | strip_html | newline_to_br }}
       <br />
       {% if page.event.facebook_link %}
       <a class="btn btn-facebook w-100 mb-3" href="{{ page.event.facebook_link }}">
