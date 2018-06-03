@@ -19,7 +19,7 @@ layout: frontpage
 <section id="glance" class="bg-light d-flex" style="min-height: 50vh;">
   <div class="container d-flex flex-column py-3" style="flex: 1;">
     <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
-    <div class="d-flex" style="flex: 1;">
+    <div class="d-flex flex-column flex-md-row" style="flex: 1;">
       {% include next_social.html category=site.categories.weekly-social %}
       {% include glance_full_entry.html type="Social" post=most_recent_post %}
       {% include next_social.html category=site.categories.lan %}
