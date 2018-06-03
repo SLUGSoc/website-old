@@ -1,17 +1,18 @@
+  {% assign posts = site.posts | reverse %}
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    {% for post in site.posts %}
+    {% for post in posts %}
     {% assign curr_date = site.time | date: "%Y-%m-%d" %}
     {% assign event_date = post.event.date | date: "%Y-%m-%d" %}
     {% if curr_date < event_date %}
-    <li data-target="#myCarousel" data-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active">{% endif %}</li>
+    <li data-target="#myCarousel" data-slide-to="{% increment counter %}" {% if forloop.first %}class="active">{% endif %}</li>
     {% endif %}
     {% endfor %}
   </ol>
   <div class="carousel-inner">
-    {% for post in site.posts %}
-    {% assign curr_date = site.time | date: "%Y-%m-%d" %}
-    {% assign event_date = post.event.date | date: "%Y-%m-%d" %}
+    {% for post in posts %}
+    {% assign curr_date = site.time | date: "%s" %}
+    {% assign event_date = post.event.date | date: "%s" %}
     {% if curr_date < event_date %}
        {% include carousel_item.html post=post %}
        {% endif %}
