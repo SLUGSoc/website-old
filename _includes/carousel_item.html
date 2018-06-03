@@ -4,9 +4,9 @@
   <div class="container">
     <div class="carousel-caption text-left rounded">
       <h1>{{ include.post.title }}</h1>
-      <p class="bg-light text-dark p-1 rounded"><b><span class="badge badge-pill badge-primary">{{ event_date | date: "%a, %b %d" }}</span> {{ include.post.summary }}</b></p>
+      <p class="bg-light text-dark p-1 rounded"><b><span class="badge badge-pill badge-danger">{{ event_date | date: "%a, %b %d" }}</span> {{ include.post.summary }}</b></p>
       <p>
-      <a class="btn btn-lg btn-primary" href="{{ include.post.url }}" role="button">
+      <a class="btn btn-lg btn-danger" href="{{ include.post.url }}" role="button">
         <span>
           {% if include.post.prompt %}
           {{ include.post.prompt }}

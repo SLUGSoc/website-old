@@ -7,7 +7,7 @@ layout: frontpage
     <div class="col-md d-none d-md-block">
       {% include carousel.html %}
     </div>
-    <div class="col-md p-3 bg-dark text-light">
+    <div class="col-md p-3 bg-light text-dark">
       <div class="d-flex flex-column justify-content-center" style="height: 100%;">
         <img class="img-fluid d-block d-md-none mx-auto mb-3" src="https://placehold.it/300" style="flex: 1;"/>
         <h2>Welcome to SLUGSoc!</h2>
@@ -21,9 +21,9 @@ layout: frontpage
     </div>
   </div>
 </section>
-<section id="glance" class="bg-light d-flex" style="min-height: 50vh;">
+<section id="glance" class="bg-dark text-light d-flex" style="min-height: 50vh;">
   <div class="container d-flex flex-column py-3" style="flex: 1;">
-    <h2>SLUGSoc <span class="text-muted">at a glance</span></h2>
+    <h2>SLUGSoc <span class="">at a glance</span></h2>
     <div class="d-flex flex-column flex-md-row" style="flex: 1;">
       {% include next_social.html category=site.categories.weekly-social %}
       {% include glance_full_entry.html type="Social" post=most_recent_post %}
@@ -116,7 +116,7 @@ layout: frontpage
         <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
         {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
         <div class="btn-group d-flex mb-3">
-          {% include button.html style='primary' class="btn-lg w-100 mb-3" href=site.society_join_link text="Join SLUGS" %}
+          {% include button.html style='danger' class="btn-lg w-100 mb-3" href=site.society_join_link text="Join SLUGS" %}
           {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server' icon='fab fa-discord' %}
         </div>
       </div>
