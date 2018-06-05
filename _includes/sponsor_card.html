@@ -1,0 +1,30 @@
+<div class="card bg-dark text-light mb-3">
+  {% if include.sponsor.image %}
+  <img class="card-img-top sponsor-card-img" src="{{ include.sponsor.image }}" alt="Card image cap">
+  {% endif %}
+  <div class="card-body">
+    <h4 class="card-title d-inline-block w-100">
+      <div class="row">
+        <div class="col">
+          {{ include.sponsor.name }}
+        </div>
+        <div class="col text-right">
+      <a href="{{ include.sponsor.link }}" class="btn btn-danger">
+        <span>
+          <i class="fas fa-globe"></i>
+          <span class="expand-text">View Site</span>
+        </span>
+      </a>
+      <a href="{{ include.sponsor.facebook_link }}" class="btn btn-facebook">
+        <span>
+          <i class="fab fa-facebook"></i>
+          <span class="expand-text">Facebook</span>
+        </span>
+      </a>
+    
+        </div>
+      </div>
+    </h4>
+    <p class="card-text">{{ include.sponsor.blurb }}</p>
+  </div>
+</div>

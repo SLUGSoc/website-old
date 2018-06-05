@@ -137,5 +137,18 @@ layout: frontpage
       </div>
     </div>
     <hr>
+    <div class="row">
+      <div class="col">
+        <h2><span class="text-muted">A massive thanks to</span> our sponsors!</h2>
+        <p class="lead">We have our sponsors to thank for the success of our events. Follow the links below to check them out!</p>
+        <div class="row">
+        {% for sponsor in site.data.sponsors %}
+          <div class="col">
+            {% include sponsor_card.html sponsor=sponsor %}
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 </section>

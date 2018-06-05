@@ -141,3 +141,10 @@ html,body {
 .font-impact {
   font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
 }
+
+img.sponsor-card-img {
+  max-height: 200px;
+  object-fit: contain;
+  padding: 0px 5px;
+  background-color: white;
+}
