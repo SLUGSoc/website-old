@@ -34,6 +34,7 @@ include-yarn-deps:
 	cp node_modules/jquery-scrollify/jquery.scrollify.js $(VENDOR_DIR)
 	cp node_modules/clipboard/dist/clipboard.min.js $(VENDOR_DIR)
 	cp node_modules/sticky-kit/dist/sticky-kit.min.js $(VENDOR_DIR)
+	cp node_modules/cheet.js/cheet.min.js $(VENDOR_DIR)
 
 build: install include-yarn-deps
 	$(JEKYLL) build

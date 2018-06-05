@@ -6,6 +6,10 @@ bootstrap@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
 
+cheet.js@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/cheet.js/-/cheet.js-0.3.3.tgz#c98e5fdefc8c6241a1cd6dcf71a09b063887daed"
+
 clipboard@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.1.tgz#a12481e1c13d8a50f5f036b0560fe5d16d74e46a"

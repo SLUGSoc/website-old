@@ -19,4 +19,9 @@ $(document).ready(function() {
         .children()
         .removeClass('compact')
   });
+  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
+    $('main').append("<h1 class=\"d-fixed fixed-bottom text-light text-stroke-black w-100 text-center mt-3 font-impact\"> BOTTOM TEXT</h1>");
+    $('main').append("<h1 class=\"d-fixed fixed-top text-light text-stroke-black w-100 text-center font-impact\"> WE LIVE IN A SOCIETY</h1>");
+    cheet.disable('↑ ↑ ↓ ↓ ← → ← → b a');
+  });
 })
