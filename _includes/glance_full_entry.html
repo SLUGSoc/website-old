@@ -6,8 +6,8 @@
 {% endunless %}
 {% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
-  <div class="card" style="min-height: 100px; flex: inherit; height: 100%;">
-    <div class="card-img d-flex" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; min-height: 100px; height: inherit;">
+  <div class="card m-1" style="min-height: 100px; flex: inherit; height: 100%;">
+    <div class="card-img d-flex rounded-0 rounded-top" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; min-height: 100px; height: inherit;">
     <a class="event-card" href="{{ post.url }}" style="flex: 1; height: 100%;">
       <div class="card-body d-flex flex-row align-items-center flex-grow-1 text-light text-shadowed" style="flex: 1; height: 100%;">
         <div class="flex-column align-items-start pr-3 flex-grown-1 h6">
@@ -45,7 +45,7 @@
     </a>
     </div>
     {% if post.event.facebook_link or post.event.ticket_link %}
-      <div class="card-footer row no-gutters p-0">
+      <div class="card-footer border-top-0 row no-gutters p-0">
         {% if post.event.facebook_link %}
         <a href="{{ post.event.facebook_link }}" class="col text-light bg-facebook p-1 text-center py-auto">
           <i class="fab fa-facebook"></i> View Facebook Event
