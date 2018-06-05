@@ -1,16 +1,27 @@
 - title: Mario Kart 8 Deluxe
   platform: Nintendo Switch
+  link: https://mariokart8.nintendo.com/
 - title: Super Smash Bros. for Wii U
   platform: Wii U
+  link: https://www.smashbros.com/en_GB/index.html
 - title: God of War
   platform: PlayStation 4
+  link: http://godofwar.playstation.com/
 - title: Gears of War
   platform: Xbox One
+  link: https://gearsofwar.com/en-us
 - title: Bomberman Blast
   platform: Wii
+  link: https://en.wikipedia.org/wiki/Bomberman_Blast
 - title: Brawlhalla
   platform: PC
+  link: https://www.brawlhalla.com/
 - title: Power Stone 2
   platform: Dreamcast
+  link: https://en.wikipedia.org/wiki/Power_Stone_2
 - title: Towerfall Ascension
   platform: PC
+  link: http://www.towerfall-game.com/
+- title: WarioWare Smooth Moves
+  platform: Wii
+  link: https://www.nintendo.co.uk/Games/Wii/WarioWare-Smooth-Moves-283850.html

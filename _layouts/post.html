@@ -11,32 +11,37 @@ layout: default
         <h3 class="d-md-none">{{ page.title }}</h3>
         <ul class="list-inline">
           <li class="list-inline-item align-middle">
-            <i class="fas fa-calendar"></i> {{ page.event.date | date: "%A, %B %d" }}
+            <span class="badge badge-danger badge-pill"><i class="fas fa-calendar"></i></span>
+             {{ page.event.date | date: "%A, %B %-d" }}
           </li>
           <li class="list-inline-item align-middle">
-            <i class="fas fa-clock"></i> {{ page.event.date | date: "%-I:%M%p" }}
+            <span class="badge badge-pill badge-danger"><i class="fas fa-clock"></i></span>
+             {{ page.event.date | date: "%-I.%M%p" }}
           </li>
           <li class="list-inline-item align-middle">
-            <i class="fas fa-map-marker"></i> <a href="{{ page.event.location_link }}">{{ page.event.location }}</a>
+            <span class="badge badge-pill badge-danger"><i class="fas fa-map-marker"></i></span>
+             <a href="{{ page.event.location_link }}">{{ page.event.location }}</a>
           </li>
         </ul>
         
-        {% if page.games %}
+        {% if page.games.size > 0 %}
         <ul class="list-inline">
           <li class="list-inline-item align-middle">
-            <i class="fas fa-gamepad"></i>
+            <span class="badge badge-danger badge-pill"><i class="fas fa-gamepad"></i></span>
           </li>
           {% for game in page.games %}
             {% assign game_entry = site.data.games | where: 'title', game | first %}
             {% assign platform = site.data.platforms | where: 'name', game_entry.platform | first %}
             <li class="list-inline-item align-middle">
               {% if game_entry and platform %}
+              <a href="{{ game_entry.link }}">
               <span class="badge badge-pill badge-{{ platform.color }}">
                 <i class="{{ platform.icon }}"></i>
               {% endif %}
                 {{ game }}
               {% if game_entry and platform %}
               </span>
+              </a>
               {% endif %}
             </li>
           {% endfor %}
