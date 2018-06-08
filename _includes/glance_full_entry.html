@@ -6,10 +6,12 @@
 {% endunless %}
 {% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
+{% assign post_to_use = post %}
+{% endif %}
   <div class="card m-1" style="min-height: 100px; flex: inherit; height: 100%;">
     <div class="card-img d-flex rounded-0 rounded-top" style="background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url({{ post.image }}); background-color: black; background-position: center center; background-size: cover; min-height: 100px; height: inherit;">
-    <a class="event-card" href="{{ post.url }}" style="flex: 1; height: 100%;">
-      <div class="card-body d-flex flex-row align-items-center flex-grow-1 text-light text-shadowed" style="flex: 1; height: 100%;">
+    <a class="event-card" href="{{ post_to_use.url }}" style="flex: 1; height: 100%;">
+      <div class="card-body d-flex flex-row align-items-center justify-content-center flex-grow-1 text-light text-shadowed" style="flex: 1; height: 100%;">
         <div class="flex-column align-items-start pr-3 flex-grown-1 h6">
           <div>
             {% if include.type == 'Social' %}
@@ -26,33 +28,41 @@
           <div class="mt-auto">
             <span class="fa-2x fa-layers fa-fw">
               <i class="fas fa-calendar"></i>
-              <span class="fa-layers-text" data-fa-transform="shrink-11 down-4 right-3" style="color: grey; text-shadow: none; font-weight: bold;">{{ post.event.date | date: "%b"}}</span>
-              <span class="fa-layers-text" data-fa-transform="shrink-9 down-4 left-3" style="color: black; text-shadow: none;">{{ post.event.date | date: "%-d"}}</span>
+              {% if post_to_use.event.date %}
+              <span class="fa-layers-text" data-fa-transform="shrink-11 down-4 right-3" style="color: grey; text-shadow: none; font-weight: bold;">{{ post_to_use.event.date | date: "%b" }}</span>
+              <span class="fa-layers-text" data-fa-transform="shrink-9 down-4 left-3" style="color: black; text-shadow: none;">{{ post_to_use.event.date | date: "%-d" | default: "TBC" }}</span>
+              {% else %}
+              <span class="fa-layers-text" data-fa-transform="shrink-9 down-4" style="color: black; text-shadow: none;">{{ post_to_use.event.date | date: "%-d" | default: "TBC" }}</span>
+              {% endif %}
             </span>
-              <p class="text-center">{{ post.event.date | date: "%-d %b"}}</p>
+              <p class="text-center">{{ post_to_use.event.date | date: "%-d %b"}}</p>
           </div>
         </div>
 
         <div class="flex-column">
-          <h4 class="flex-grow-1">{{ post.title}}</h4>
+          <h4 class="flex-grow-1">{{ post_to_use.title | default: "Details coming soon!"}}</h4>
           <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-calendar-alt"></i></span>{{ post.event.date | date: "%-d %B" }}</li>
-            <li><span class="fa-li"><i class="fas fa-clock"></i></span>{{ post.event.date | date: "%-I:%M%p" }}</li>
-            <li><span class="fa-li"><i class="fas fa-map-pin"></i></span>{{ post.event.location }}</li>
+            {% if post_to_use.event.date %}
+            <li><span class="fa-li"><i class="fas fa-calendar-alt"></i></span>{{ post_to_use.event.date | date: "%-d %B" }}</li>
+            <li><span class="fa-li"><i class="fas fa-clock"></i></span>{{ post_to_use.event.date | date: "%-I:%M%p" }}</li>
+            {% endif %}
+            {% if post_to_use.event.location %}
+            <li><span class="fa-li"><i class="fas fa-map-pin"></i></span>{{ post_to_use.event.location }}</li>
+            {% endif %}
           </ul>
         </div>
       </div>
     </a>
     </div>
-    {% if post.event.facebook_link or post.event.ticket_link %}
+    {% if post_to_use.event.facebook_link or post_to_use.event.ticket_link %}
       <div class="card-footer border-top-0 row no-gutters p-0">
-        {% if post.event.facebook_link %}
-        <a href="{{ post.event.facebook_link }}" class="col text-light bg-facebook p-1 text-center py-auto">
+        {% if post_to_use.event.facebook_link %}
+        <a href="{{ post_to_use.event.facebook_link }}" class="col text-light bg-facebook p-1 text-center py-auto">
           <i class="fab fa-facebook"></i> View Facebook Event
         </a>
         {% endif %}
-        {% if post.event.ticket_link %}
-        <a href="{{ post.event.ticket_link }}" class="col text-light bg-danger p-1 text-center py-auto">
+        {% if post_to_use.event.ticket_link %}
+        <a href="{{ post_to_use.event.ticket_link }}" class="col text-light bg-danger p-1 text-center py-auto">
           <i class="fas fa-ticket-alt"></i> Buy Ticket
         </a>
         {% endif %}
@@ -60,6 +70,4 @@
     {% endif %}
   </div>
 </a>
-{% else %}
-<p class="text-center">Details coming soon!</p>
-{% endif %}
+{% assign post_to_use = nil %}
