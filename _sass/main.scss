@@ -1,0 +1,129 @@
+.navbar-brand, .nav-link {
+    font-family: $headings-font-family;
+}
+
+.btn {
+  transform: skewX(-25deg) translateY(1px);
+  border-radius: 0;
+  border: 0;
+  border-left: 10px solid darken($primary, 20%);
+  border-radius: 0.3em;
+  font-size: 1.2rem;
+}
+
+.btn>span {
+    transform: skewX(25deg);
+    display: inline-block;
+    font-family: $headings-font-family;
+    :after {
+        content: '»';
+    }
+    span:after {
+        content: '';
+    }
+}
+
+div.carousel-caption {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: transparent; /* fallback color */
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1%;
+}
+div.carousel-caption h1 {
+  text-shadow: 3px 3px #111111;
+}
+
+.btn {
+  .expand-text {
+    width:0;
+    overflow:hidden;
+    margin-right:0;
+    transition: width .2s, margin .2s;
+    // font-family: $font-family-sans-serif;
+    transform: skewX(0deg);
+  }
+  i, .expand-text {
+    display:inline-block;
+    vertical-align:middle;
+  }
+  &:hover {
+    .expand-text {
+      margin-right:0;
+      width:70px;
+    }
+  }
+}
+
+.brand-compact {
+    transition: width .2s;
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+.brand-compact.compact {
+    width: 0 !important;
+}
+
+.text-shadowed {
+  text-shadow: 1px 1px 4px #111111;
+  color: white;
+}
+
+.bg-trans {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.card-img-fit {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://placehold.it/300");
+  background-position: center center;
+  background-size: cover;
+  height: 100px;
+  width: auto;
+}
+
+main {
+  min-height: 85vh;
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@supports (position: -webkit-sticky) {
+  .sticky-top {
+    position: -webkit-sticky;
+    top: 0;
+    z-index: $zindex-sticky;
+  }
+}
+
+.text-stroke-black {
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.font-impact {
+  font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+}
+
+img.sponsor-card-img {
+  max-height: 200px;
+  object-fit: contain;
+  padding: 0px 5px;
+  background-color: white;
+}
