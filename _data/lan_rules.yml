@@ -25,7 +25,7 @@
     If you have a serious allergy or medical condition, please make the committee aware beforehand.
     Please observe the emergency exits and corridors and do not block them.
     Ensure you check in and out of the building with the committee / registration RFID scanner in case of fire.
-  icon: fas exclamation-triangle
+  icon: fas fa-exclamation-triangle
 - summary: Leave the area tidy.
   content: When leaving the LAN, dispose of all waste. In particular, make sure you have all of your gear with you when you leave the event.
   icon: fas fa-broom
