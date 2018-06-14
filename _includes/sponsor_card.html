@@ -1,14 +1,14 @@
-<div class="card bg-dark text-light mb-3">
-  {% if include.sponsor.image %}
-  <img class="card-img-top sponsor-card-img" src="{{ include.sponsor.image }}" alt="Card image cap">
-  {% endif %}
-  <div class="card-body">
-    <h4 class="card-title d-inline-block w-100">
-      <div class="row">
-        <div class="col">
-          {{ include.sponsor.name }}
-        </div>
-        <div class="col text-right">
+<div class="card sponsor-card bg-dark text-light mb-3">
+  <div class="row" style="max-height: inherit;">
+    {% if include.sponsor.image %} 
+    <div class="col-md-6" style="max-height: inherit;"> 
+      <img class="card-img sponsor-card-img" src="{{ include.sponsor.image }}" alt="Card image cap"> 
+    </div> 
+    {% endif %} 
+    <div class="card-body col-md-6"> <h4 class="card-title d-inline-block w-100"> 
+        {{ include.sponsor.name }}
+      </h4>
+      <p class="card-text">{{ include.sponsor.blurb }}</p>
       <a href="{{ include.sponsor.link }}" class="btn btn-danger">
         <span>
           <i class="fas fa-globe"></i>
@@ -21,10 +21,7 @@
           <span class="expand-text">Facebook</span>
         </span>
       </a>
-    
-        </div>
-      </div>
-    </h4>
-    <p class="card-text">{{ include.sponsor.blurb }}</p>
+
+    </div>
   </div>
 </div>
