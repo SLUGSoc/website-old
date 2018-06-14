@@ -1,11 +1,11 @@
 <div class="card mb-3">
-  {% if include.member.image %}
-  <div class="card-img-top" style="background-image: url({{ include.member.image }}); background-color: black; background-position: center center; background-size: cover; height: 50vh;"></div>
-  {% endif %}
   <div class="card-body">
     <div class="card-title">
       <div class="row pt-3">
         <div class="col">
+          {% if include.member.image %}
+          <div class="card-img-top" style="background-image: url({{ include.member.image }}); background-color: black; background-position: center center; background-size: cover; height: 200px;"></div>
+          {% endif %}
           <h3><small class="text-muted">{{ include.member.role}}</small><br />{{ include.member.name }} {%if include.member.alias%}|{% endif %} {{ include.member.alias}}</h3>    
         </div>
         <div class="col">
