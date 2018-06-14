@@ -14,19 +14,26 @@
       <div class="card-body d-flex flex-row align-items-center justify-content-center flex-grow-1 text-light text-shadowed" style="flex: 1; height: 100%;">
         <div class="flex-column align-items-start pr-3 flex-grown-1 h6">
           <div>
-            {% if include.type == 'Social' %}
-            <i class="d-block fas fa-2x fa-gamepad"></i>
-            {% else if include.type == 'LAN' %}
-            <i class="d-block fas fa-2x fa-desktop"></i>
-            {% else if include.type == 'Meeting' %}
-            <i class="d-block fas fa-2x fa-users"></i>
+            {% if post_to_use.categories contains 'weekly-social' %}
+            {% assign type = 'Social' %}
+            <i class="d-block mx-auto fas fa-2x fa-gamepad"></i>
+              {% if post_to_use.categories contains 'unofficial' %}
+              {% assign type = 'Unofficial<br/>Social' %}
+              {% endif %}
+            {% else if post_to_use.categories contains 'lan' %}
+            {% assign type = 'LAN' %}
+            <i class="d-block mx-auto fas fa-2x fa-desktop"></i>
+            {% else if post_to_use.categories contains 'meeting' %}
+            {% assign type = 'Meeting' %}
+            <i class="d-block mx-auto fas fa-2x fa-users"></i>
             {% else %}
-            <i class="d-block fas fa-2x fa-users"></i>
+            {% assign type = 'Other' %}
+            <i class="d-block mx-auto fas fa-2x fa-users"></i>
             {% endif %}
-            <p class="text-center">{{ include.type }}</p>
+            <p class="text-center">{{ type }}</p>
           </div>
           <div class="mt-auto">
-            <span class="fa-2x fa-layers fa-fw">
+            <span class="fa-2x fa-layers fa-fw d-block mx-auto mb-1">
               <i class="fas fa-calendar"></i>
               {% if post_to_use.event.date %}
               <span class="fa-layers-text" data-fa-transform="shrink-11 down-4 right-3" style="color: grey; text-shadow: none; font-weight: bold;">{{ post_to_use.event.date | date: "%b" }}</span>
