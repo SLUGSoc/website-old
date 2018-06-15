@@ -6,3 +6,7 @@
   port: 27025
 - game: TeamSpeak 3
   port: Default
+- game: Minecraft (FTB) - Revelations
+  port: 25565
+- game: Minecraft (FTB) - Sky Factory
+  port: 25566
