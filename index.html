@@ -10,15 +10,21 @@ layout: frontpage
       </div>
     {% endif %}
     <div class="col-md p-3 bg-light text-dark">
-      <div class="d-flex flex-column justify-content-center text-center" style="height: 100%;">
-        <img class="img-fluid d-block d-md-none mx-auto mb-3" src="https://placehold.it/300" style="flex: 1;"/>
-        <h2>Welcome to SLUGSoc!</h2>
-        <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
-        <p>
-        <b>Not a member yet?</b> <a class="text-danger" href="{{ site.society_join_link }}"><i class="fas fa-edit"></i> Sign up</a> or join our <a class="text-danger" href="https://discord.gg/{{ site.discord_invite_link }}"><i class="fab fa-discord"></i> Discord server</a>!<br />
-        Read on for a taster of what it's like to game with SLUGS.<br />
-        <b>Already a SLUG?</b> <a href="#glance" class="text-danger">Check out what's coming up.</a>
-        </p>
+      <div class="row" style="height: 100%;">
+        <div class="col-12 col-md-6 d-flex align-items-center">
+          <img class="img-fluid d-none d-md-block mx-auto mb-3" src="/assets/img/logo.png" style="flex: 1;"/>
+        </div>
+        <div class="col-12 col-md-6 d-flex align-items-center">
+          <div>
+            <h2>Welcome to SLUGSoc!</h2>
+            <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
+            <p>
+            <b>Not a member yet?</b> <a class="text-danger" href="{{ site.society_join_link }}"><i class="fas fa-edit"></i> Sign up</a> or join our <a class="text-danger" href="https://discord.gg/{{ site.discord_invite_link }}"><i class="fab fa-discord"></i> Discord server</a>!<br />
+            Read on for a taster of what it's like to game with SLUGS.<br />
+            <b>Already a SLUG?</b> <a href="#glance" class="text-danger">Check out what's coming up.</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
