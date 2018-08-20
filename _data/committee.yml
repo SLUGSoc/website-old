@@ -91,8 +91,12 @@
 - name: Fred
   alias: RaptureAwaits
   role: Tech Officer
+  blurb: Hey, I'm Fred; one of four assistant techs in the SLUGSoc committee helping to make LANs run smoothly. At the time of writing, I'm a Mathematics student entering my second year at Sheffield with a love for group theory and a hatred of statistics. You can find me at LANs by looking for the tired man with glasses who hasn't stopped playing Destiny 2 since he arrived (or just find the chair with my SLUGS hoodie on the back).
   id:
+    steam: RaptureAwaits
+    steam64: 76561198049781936
     discord: RaptureAwaits#7905
+    battlenet: Rapture#2357
 - name: Eric
   alias: Chintam
   role: Senior Tech Officer
