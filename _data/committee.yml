@@ -55,7 +55,6 @@
 - name: Simon
   alias: Kotori
   role: Tech Officer
-  image: /assets/img/committee18.jpg
   id:
     steam: Kotorious B.R.D.
     steam64: 76561198087013663
