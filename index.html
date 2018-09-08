@@ -34,9 +34,12 @@ layout: frontpage
     <h2>SLUGSoc <span class="">at a glance</span></h2>
     <div class="d-flex flex-column flex-md-row" style="flex: 1;">
       {% include next_social.html category=site.categories.weekly-social %}
+      {% assign social_defined = most_recent_post %}
       {% include glance_full_entry.html type="Social" post=most_recent_post %}
       {% include next_social.html category=site.categories.lan %}
+      {% unless social_defined == nil and most_recent_post == nil %}
       {% include glance_full_entry.html type="LAN" post=most_recent_post %}
+      {% endunless %}
     </div>
   </div>
 </section>
