@@ -1,7 +1,7 @@
 <div class="card sponsor-card bg-dark text-light mb-3">
   <div class="row" style="max-height: inherit;">
     {% if include.sponsor.image %} 
-    <div class="col-md-6" style="max-height: inherit;"> 
+    <div class="col-md-6 d-flex align-items-center" style="max-height: inherit;"> 
       <img class="card-img sponsor-card-img" src="{{ include.sponsor.image }}" alt="Card image cap"> 
     </div> 
     {% endif %} 
@@ -19,6 +19,12 @@
         <span>
           <i class="fab fa-facebook"></i>
           <span class="expand-text">Facebook</span>
+        </span>
+      </a>
+      <a href="{{ include.sponsor.twitter_link }}" class="btn btn-twitter">
+        <span>
+          <i class="fab fa-twitter"></i>
+          <span class="expand-text">Twitter</span>
         </span>
       </a>
 

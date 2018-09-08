@@ -15,7 +15,7 @@ layout: frontpage
           <img class="img-fluid d-none d-md-block mx-auto mb-3" src="/assets/img/logo-white.png" style="flex: 1;"/>
         </div>
         <div class="col-12 col-md-6 d-flex align-items-center">
-          <div class="bg-dark p-5">
+          <div class="p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
             <h2>Welcome to SLUGSoc!</h2>
             <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
             <p>
@@ -29,8 +29,8 @@ layout: frontpage
     </div>
   </div>
 </section>
-<section id="glance" class="bg-dark text-light d-flex" style="min-height: 50vh;">
-  <div class="container-fluid px-5 d-flex flex-column py-3" style="flex: 1;">
+<section id="glance" class="bg-dark text-light d-flex py-5 mb-5" style="min-height: 50vh;">
+  <div class="container-fluid px-5 d-flex flex-column" style="flex: 1;">
     <h2>SLUGSoc <span class="">at a glance</span></h2>
     <div class="d-flex flex-column flex-md-row" style="flex: 1;">
       {% include next_social.html category=site.categories.weekly-social %}
@@ -43,9 +43,9 @@ layout: frontpage
     </div>
   </div>
 </section>
-<section id="summary" class="bg-dark text-light">
+<section id="summary" class="mb-5 text-light">
   <div class="container-fluid px-5">
-    <div class="row pt-3">
+    <div class="row">
       <div class="col d-flex align-items-center" style="min-height: 50vh; background: url(/assets/img/social.jpg) no-repeat scroll center center; background-size: cover; text-shadow: 1px 1px 2px black;">
         <div class="text-center m-3 p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
           <h2>Socials</h2>
@@ -146,7 +146,9 @@ layout: frontpage
         <p class="lead">We have our sponsors to thank for the success of our events. Follow the links below to check them out!</p>
         <div class="row">
         {% for sponsor in site.data.sponsors %}
-          {% include sponsor_card.html sponsor=sponsor %}
+          <div class="offset-md-3 col-md-6">
+            {% include sponsor_card.html sponsor=sponsor %}
+          </div>
         {% endfor %}
         </div>
       </div>

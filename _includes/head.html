@@ -10,14 +10,14 @@
 
   <!-- other stuff in your site header like javascript or whatever above here -->
 
-  <meta name="twitter:card" content="{{ post.image | default: /assets/img/committee18.jpg }}"> <!-- TODO: SLUGS Logo -->
+  <meta name="twitter:card" content="{{ post.image | default: /assets/img/logo.jpg }}">
   <meta name="twitter:site" content="@{{ twitter_username }}">
   <meta name="twitter:creator" content="@{{ twitter_username}}">
 
   <!-- hardcoding an image here so I don't have to worry about attaching an image to each blog post in the future  -->
 
-  <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
-  <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_card2.png">
+  <meta property="og:image" content="{{ site.url }}/img/logo.png" />
+  <meta name="twitter:image:src" content="{{ site.url }}/img/logo.png">
   <meta content="{{ site.title }}" property="og:site_name">
 
   <!-- Set a page title, or default to site title if missing for some reason  -->
