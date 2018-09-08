@@ -11,9 +11,6 @@
     transform: skewX(25deg);
     display: inline-block;
     font-family: $headings-font-family;
-    :after {
-        content: '»';
-    }
     span:after {
         content: '';
     }

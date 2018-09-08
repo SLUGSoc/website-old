@@ -9,13 +9,13 @@ layout: frontpage
         {% include carousel.html %}
       </div>
     {% endif %}
-    <div class="col-md p-3 bg-light text-dark">
+    <div class="col-md p-3 text-light" style="background: url(/assets/img/duotone/LAN66CRAWL-DUOTONE.jpg) no-repeat fixed center; background-size: cover;">
       <div class="row" style="height: 100%;">
         <div class="col-12 col-md-6 d-flex align-items-center">
-          <img class="img-fluid d-none d-md-block mx-auto mb-3" src="/assets/img/logo.png" style="flex: 1;"/>
+          <img class="img-fluid d-none d-md-block mx-auto mb-3" src="/assets/img/logo-white.png" style="flex: 1;"/>
         </div>
         <div class="col-12 col-md-6 d-flex align-items-center">
-          <div>
+          <div class="bg-dark p-5">
             <h2>Welcome to SLUGSoc!</h2>
             <p>SLUGSoc is the University of Sheffield Gaming Society. Whether you've only ever played <i>Wii Sports</i> or <i>League of Legends</i> is more your style, SLUGS welcomes a wide variety of games and players! We meet on Tuesdays for drinks and games, and LANs are hosted on a roughly monthly basis.</p>
             <p>
@@ -46,111 +46,103 @@ layout: frontpage
 <section id="summary" class="bg-dark text-light">
   <div class="container-fluid px-5">
     <div class="row pt-3">
-      <div class="col">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>Socials</h2>
-        <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
-        <table class="table table-sm table-hover">
-          <tbody>
-            {% include event_table.html category=site.categories.weekly-social limit=3 %}
-          </tbody>
-        </table>
-        <p>
-        {% include button.html style="secondary" class="w-100" href="/socials.html" text="View details" %}
-        </p>
+      <div class="col d-flex align-items-center" style="min-height: 50vh; background: url(/assets/img/social.jpg) no-repeat scroll center center; background-size: cover; text-shadow: 1px 1px 2px black;">
+        <div class="text-center m-3 p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
+          <h2>Socials</h2>
+          <p>SLUGSoc gathers weekly for fun pick-up-and-play games and drinks. Head this way to learn which games you'll get to enjoy each week! We normally meet in Bar One at 6pm, moving on to Huttons Bar at 7.30pm.</p>
+          <table class="table table-sm table-hover">
+            <tbody>
+              {% include event_table.html category=site.categories.weekly-social limit=3 %}
+            </tbody>
+          </table>
+          <p>
+          {% include button.html style="secondary" class="w-100" href="/socials.html" text="View details" %}
+          </p>
+        </div>
       </div>
-      <div class="col">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>LAN events</h2>
-        <p>Once every few weeks, we run LAN events at the Ridge building in Ranmoor Student Village. They're an excellent opportunity to engage with the groups you play games with. If you've not yet been to a LAN and would like to learn more, head this way!</p>
-        <p>
-        <table class="table table-sm table-hover">
-          <tbody>
-            {% include event_table.html category=site.categories.lan limit=3 %}
-          </tbody>
-        </table>
-        {% include button.html style="secondary" class="w-100" href="/lan.html" text="View details" %}
-        </p>
+      <div class="col d-flex align-items-center" style="min-height: 50vh; background: url(/assets/img/lan.jpg) no-repeat scroll center center; background-size: cover; text-shadow: 1px 1px 2px black;">
+        <div class="text-center m-3 p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
+          <h2>LAN events</h2>
+          <p>Once every few weeks, we run LAN events at the Ridge building in Ranmoor Student Village. They're an excellent opportunity to engage with the groups you play games with. If you've not yet been to a LAN and would like to learn more, head this way!</p>
+          <p>
+          <table class="table table-sm table-hover">
+            <tbody>
+              {% include event_table.html category=site.categories.lan limit=3 %}
+            </tbody>
+          </table>
+          {% include button.html style="secondary" class="w-100" href="/lan.html" text="View details" %}
+          </p>
+        </div>
       </div>
     </div>
-    <div class="row pt-3">
-      <div class="col">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>Competitive</h2>
-        <p>For the ranked players among you, we engage with the <abbr title="National University Esports League">NUEL</abbr> every year in games like CS:GO, League of Legends, and Rocket League. Take the fight to other universities and wave that black and gold banner!</p>
-        <p>Our eSports officer will be following goings-on with NUEL, so if you're interested, keep tabs on the <b>#nuel</b> channel in the server!</p>
-        <p>
-        {% capture discord_link %}
-        https://discord.gg/{{ site.discord_invite_link }}
-        {% endcapture %}
-        {% include button.html style="discord" class="w-100" href=discord_link icon="fab fa-discord" text="Join Discord server" %}
-        </p>
+    <div class="row">
+      <div class="col d-flex align-items-center" style="min-height: 50vh; background: url(/assets/img/competitive.jpg) no-repeat scroll center center; background-size: cover;">
+        <div class="text-center m-3 p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
+          <h2>Competitive</h2>
+          <p>For the ranked players among you, we engage with the <abbr title="National University Esports League">NUEL</abbr> every year in games like CS:GO, League of Legends, and Rocket League. Take the fight to other universities and wave that black and gold banner!</p>
+          <p>Our eSports officer will be following goings-on with NUEL, so if you're interested, keep tabs on the <b>#nuel</b> channel in the server!</p>
+          <p>
+          {% capture discord_link %}
+          https://discord.gg/{{ site.discord_invite_link }}
+          {% endcapture %}
+          {% include button.html style="discord" class="w-100" href=discord_link icon="fab fa-discord" text="Join Discord server" %}
+          </p>
+        </div>
       </div>
-      <div class="col">
-        <img class="rounded-circle" src="https://placehold.it/140" alt="Generic placeholder image" width="140" height="140">
-        <h2>Game Servers</h2>
-        <p>We also host our own game server on sleipnir.slugsoc.co.uk. Details of these are as follows:</p>
-        <table class="table table-sm">
-          <thead>
-            <th>Game</th>
-            <th>Port</th>
-          </thead>
-          <tbody>
-            {% for server in site.data.servers %}
-            <tr>
-              <td>{{ server.game }}</td>
-              <td>{{ server.port }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+      <div class="col d-flex align-items-center" style="min-height: 50vh; background: url(/assets/img/minecraft.jpg) no-repeat scroll center center; background-size: cover; text-shadow: 1px 1px 2px black;">
+        <div class="text-center m-3 p-3 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
+          <h2>Game Servers</h2>
+          <p>We also host our own game server on sleipnir.slugsoc.co.uk. Details of these are as follows:</p>
+          <table class="table table-sm">
+            <thead>
+              <th>Game</th>
+              <th>Port</th>
+            </thead>
+            <tbody>
+              {% for server in site.data.servers %}
+              <tr>
+                <td>{{ server.game }}</td>
+                <td>{{ server.port }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <section>
-  <div class="container-fluid px-5 mt-5">
-    <div class="row">
-      <div class="col-md-7">
-        <h2>Our committee <span class="text-muted">loves games!</span></h2>
+  <div class="container-fluid">
+    <div class="row px-5 pt-5 d-flex align-items-center" style="min-height: 50vh; background: url(/assets/img/duotone/COMMITTEE-DUOTONE.jpg) no-repeat fixed center; background-size: cover; text-shadow: 1px 1px 2px black;">
+      <div class="text-center text-light">
+        <h2>Our committee loves games!</h2>
         <p class="lead">Our committee loves games just as much as the rest of the society! We share many roles - arranging events, setting them up, providing food and consoles, and more. Head <a href="committee.html">here</a> to see what we're all about.</p>
         {% include button.html style="primary" class="btn-lg w-100 mb-3" href="/committee.html" text="Learn more" %}
       </div>
-      <div class="col-md-5">
-        <img class="img-fluid rounded mx-auto" src='/assets/img/committee18.jpg' alt="Generic placeholder image">
-      </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-7 order-md-2">
-        <h2>Want to join SLUGS? <span class="text-muted">Here's how...</span></h2>
-        <p class="lead">If you're a university student, sign up <a href="#">here</a>. If not, why not <a href="https://discord.gg/{{ site.discord-invite-link }}">join our Discord server</a> and get involved?</p>
+    <div class="row px-5 pt-5 d-flex text-center align-items-center" style="min-height: 50vh; background: url(/assets/img/duotone/SOCIAL_FUN-DUOTONE.jpg) no-repeat fixed center; background-size: cover; text-shadow: 1px 1px 10px black;">
+      <div class="mx-auto text-light">
+        <h2>Want to join SLUGS? Here's how...</h2>
+        <p class="lead">If you're a university student, sign up <b><a class="text-light" href="{{ site.society_join_link }}">here</a></b>. If not, why not <b><a class="text-discord" href="https://discord.gg/{{ site.discord_invite_link }}">join our Discord server</a></b> and get involved?</p>
         {% capture discord_link %}https://discord.gg/{{site.discord_invite_link}}{% endcapture %}
         <div class="btn-group d-flex mb-3">
           {% include button.html style='danger' class="btn-lg w-100 mb-3" href=site.society_join_link text="Join SLUGS" %}
           {% include button.html style='discord' class='btn-lg w-100 mb-3' href=discord_link text='Join Discord server' icon='fab fa-discord' %}
         </div>
       </div>
-      <div class="col-md-5 order-md-1">
-        <img class="img-fluid rounded mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
-      </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-7">
-        <h2><span class="text-muted">Feeling</span> LAN<span class="text-muted">xious?</span></h2>
+    <div class="row px-5 pt-5 d-flex text-center align-items-center" style="min-height: 50vh; background: url(/assets/img/duotone/LAN64-DUOTONE.jpg) no-repeat fixed center; background-size: cover; text-shadow: 1px 1px 2px black;">
+      <div class="mx-auto text-light">
+        <h2>Feeling LANxious?</h2>
         <p class="lead">Never been to a LAN before? LANs are exciting weekend-long events, and they're the perfect opportunity to play games all weekend with your friends! Bring your desktops or consoles along and have a blast!</p>
         <p class="lead">Still feeling uncertain? Head this way to get the lowdown on LANs (and, importantly, read the rules).</p>
         {% include button.html style="primary" class="btn-lg w-100 mb-3" href="/lan.html" text="About SLUGS LAN events" %}
       </div>
-      <div class="col-md-5">
-        <img class="img-fluid rounded mx-auto" src='https://placehold.it/500' alt="Generic placeholder image">
-      </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col">
-        <h2><span class="text-muted">A massive thanks to</span> our sponsors!</h2>
+    <div class="row px-5 pt-5 d-flex text-center align-items-center" style="min-height: 50vh; background: url(/assets/img/duotone/TOURNEY_WIN-DUOTONE.jpg) no-repeat fixed center; background-size: cover;">
+      <div class="mx-auto text-light">
+        <h2>A massive thanks to our sponsors!</h2>
         <p class="lead">We have our sponsors to thank for the success of our events. Follow the links below to check them out!</p>
         <div class="row">
         {% for sponsor in site.data.sponsors %}
