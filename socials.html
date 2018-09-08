@@ -6,7 +6,7 @@ layout: default
   <div class="col-md-8">
     <div class="d-flex flex-column" style="min-height: 100%;">
       <h1>Socials Schedule</h1>
-      {% assign socials = site.categories.weekly-social | reverse %}
+      {% assign socials = site.categories.weekly-social %}
       {% for post in socials %}
       {% capture posttime %}{{ post.event.date | date: '%s'}}{% endcapture %}
       {% if posttime > nowunix %}

@@ -1,9 +1,5 @@
 {% assign curr_date = site.time | date: '%s' %}
-{% unless include.post %}
-{% assign post = include.category.first %}
-{% else %}
 {% assign post = include.post %}
-{% endunless %}
 {% assign date = post.event.date | date: '%s' %}
 {% if date > curr_date %}
 {% assign post_to_use = post %}

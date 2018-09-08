@@ -1,4 +1,4 @@
-{% assign posts = include.category | reverse %}
+{% assign posts = include.category %}
 {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
 {% assign loopcounter = 0 %}
 {% assign limit = include.limit %}

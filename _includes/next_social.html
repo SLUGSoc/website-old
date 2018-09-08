@@ -1,5 +1,6 @@
-{% assign category = include.category | reverse %}
+{% assign category = include.category %}
 {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+{% assign most_recent_post=nil %}
 <!-- <table> -->
   {% for post in category %}
   <!-- <tr> -->
