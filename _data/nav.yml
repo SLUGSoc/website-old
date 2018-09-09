@@ -1,12 +1,17 @@
-- title: About LANs
+- title: Socials
+  icon: fas fa-gamepad
+  url: /socials.html
+- title: LANs
+  icon: fas fa-desktop
   url: /lan.html
 - title: Our Committee
+  icon: fas fa-users
   url: /committee.html
-- title: Socials
-  url: /socials.html
 - title: Photos
+  icon: fab fa-facebook
   url: https://www.facebook.com/groups/slugsoc/photos/?filter=albums
 - title: Join Us!
+  icon: fas fa-edit
   url: https://su.sheffield.ac.uk/groups/computer-gaming-society/join
 # - title: Next Social
 #   url: '#'
