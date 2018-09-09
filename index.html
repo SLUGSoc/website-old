@@ -31,7 +31,17 @@ layout: frontpage
 </section>
 <section id="glance" class="bg-dark text-light d-flex py-5 mb-5" style="min-height: 50vh;">
   <div class="container-fluid px-5 d-flex flex-column" style="flex: 1;">
-    <h2>SLUGS <span class="">at a glance</span></h2>
+    <h2>
+      Next events
+      <a class="btn btn-danger ml-3" href="/socials.html">
+        <span>All Socials</span>
+      </a>
+      <a class="btn btn-facebook ml-3" href="https://www.facebook.com/pg/SLUGSoc/events">
+        <span>
+          <i class="fab fa-facebook mr-1"></i> Events on Facebook
+        </span>
+      </a>
+    </h2>
     <div class="d-flex flex-column flex-md-row" style="flex: 1;">
       {% include next_social.html category=site.categories.weekly-social %}
       {% assign social_defined = most_recent_post %}
