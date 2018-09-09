@@ -15,8 +15,12 @@
 - name: PlayStation 3
   color: playstation-4
   icon: fab fa-playstation
+- name: PlayStation 2
+  color: playstation-4
+  icon: fab fa-playstation
 - name: PC
   color: primary
+  icon: fab fa-steam
 - name: Dreamcast
   color: dreamcast
 - name: Wii
