@@ -1,11 +1,12 @@
-<div class="card mb-3">
+<div class="card bg-danger mb-3">
   <div class="card-body">
     <div class="card-title">
       <div class="pt-3">
         <div class="d-flex flex-column flex-md-row">
-          <div class="d-flex flex-column">
-            <h3><small class="text-muted">{{ include.member.role}}</small><br />{{ include.member.name }}</h3>
-            <h5 class="text-muted"><i class="fas fa-tag mr-1"></i>{{ include.member.alias}}</h5>
+          <div class="d-flex flex-column text-center w-50 mx-auto">
+            <img class="w-100" src="https://placehold.it/300" alt="" />
+            <h3><small><span class="badge badge-primary"><i class="fas fa-user mr-1"></i>{{ include.member.role}}</span></small><br />{{ include.member.name }}</h3>
+            <h5><i class="fas fa-tag mr-1"></i><u>{{ include.member.alias}}</u></h5>
             <h4 style="line-height: 130%;">
               {% if member.id.discord %}
               {% include tag.html ids=member.id id=member.id.discord style="Discord" %}
@@ -21,7 +22,9 @@
               {% endif %}
             </h4>
           </div>
+          {% if member.blurb %}
           <p class="card-text w-50">{{ include.member.blurb | markdownify }}</p>
+          {% endif %}
         </div>
       </div>
     </div>

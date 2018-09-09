@@ -20,6 +20,8 @@ $theme-colors: (
   "battlenet": #00B4FF
 );
 @import "../node_modules/bootstrap/scss/variables";
+$body-bg: var(--dark);
+$body-color: var(--light);
 
 $font-family-sans-serif: 'Roboto', $font-family-sans-serif;
 $headings-font-family: 'Bebas', $font-family-sans-serif;
