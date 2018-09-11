@@ -1,8 +1,13 @@
 # SLUGSoc Website The Second
 
-This is a work in progress. `master` is not suitable for deployment, but it employs some concepts that are probably useful if you're making a static site.
-
 ## Installation
+
+### Prerequisites
+
+Ensure the following is installed:
+
+- Yarn
+- Ruby 2.5 or greater with the `bundler` gem.
 
 ```
 make build
