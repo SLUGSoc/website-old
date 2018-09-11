@@ -2,14 +2,14 @@
   {% for rule in site.data.lan_rules %}
   <div class="card bg-danger text-light">
     <div class="card-header pb-0" id="heading{{ forloop.index }}">
-      <a data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="{% if forloop.first %}true{% endif %}" aria-controls="collapse{{ forloop.index }}">
+      <a data-toggle="collapse" data-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">
       <h4>
         <span><i class="fa mr-1 fa-fw {{ rule.icon }}"></i>{{ rule.summary }}</span>
       </h4>
       </a>
     </div>
 
-    <div id="collapse{{ forloop.index }}" class="collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.index }}" data-parent="#lanRulesAccordion">
+    <div id="collapse{{ forloop.index }}" class="collapse" aria-labelledby="heading{{ forloop.index }}" data-parent="#lanRulesAccordion">
       <div class="card-body text-body">{{ rule.content }}</div>
     </div>
   </div>
