@@ -1,9 +1,9 @@
-- summary: Do not bring extension leads.
-  content: Please do not bring extension leads, as our power network is very carefully worked out so that we don't short out the venue or cause a fire! We provide everyone with two power sockets (one for a monitor and one for a PC/console), so you shouldn't need one.
-  icon: fas fa-bolt
 - summary: Do not do anything illegal.
   content: Do not engage in illegal activity of any nature - in particular, piracy and consumption of alcohol.
   icon: fas fa-gavel
+- summary: Do not bring extension leads.
+  content: Please do not bring extension leads, as our power network is very carefully worked out so that we don't short out the venue or cause a fire! We provide everyone with two power sockets (one for a monitor and one for a PC/console), so you shouldn't need one.
+  icon: fas fa-bolt
 - summary: Only use two power sockets from a SLUGSoc powerstrip.
   content: Each attendee is allocated two power sockets. Please do not use any more than this.
   icon: fas fa-plug
