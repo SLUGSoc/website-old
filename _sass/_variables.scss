@@ -38,9 +38,6 @@ $headings-font-family: 'Bebas', $font-family-sans-serif;
     transform: skewX(25deg);
     display: inline-block;
     font-family: $headings-font-family;
-    :after {
-        content: '»';
-    }
     span:after {
         content: '';
     }
