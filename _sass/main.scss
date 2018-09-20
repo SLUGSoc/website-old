@@ -119,3 +119,11 @@ img.sponsor-card-img {
   object-fit: contain;
   padding: 0px 5px;
 }
+.card-columns {
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-down(sm) {
+    column-count: 1;
+  }
+}

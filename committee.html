@@ -3,14 +3,9 @@ layout: default
 ---
 <h1>Our Committee</h1>
 <img src="/assets/img/committee18.jpg" alt="Our Comittee" style="max-height: 50vh;" class="mb-3 d-block mx-auto"/>
+<div class="card-columns">
 {% for member in site.data.committee %}
-{% assign mod = forloop.index | modulo: 2 %}
-{% if mod != 0 %}
-<div class="card-deck">
-  {% endif %}
-  {% include personal_profile.html member=member %}
-  {% if mod == 0 %}
-</div>
-{% endif %}
+{% include personal_profile.html member=member %}
 {% endfor %}
+</div>
 

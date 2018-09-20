@@ -6,6 +6,7 @@
     steam64: 76561198049819756
     discord: annoytanor#4668
     battlenet: Annoytanor#2471
+  image: /assets/img/committee/jamie.png
   blurb: "I'm Jamie and I'm the president of the society. I study Computer Science and play lots of games including Battlefield, Overwatch, Minecraft and Stellaris. As president it's my job to make sure that the committee are doing their jobs and the society is working well. I'm usually around, so add me and message me on Facebook if you want to talk."
 - name: Laura
   alias: Lauriestar
@@ -15,6 +16,7 @@
     steam64: 76561198026128010
     discord: Laura#7175
     nintendo: Lauriestar
+  image: /assets/img/committee/laura.png
   blurb: Hey, I’m Laura! I’m the Inclusions Officer for SLUGSoc, so my goal is to make sure everyone feels welcome in the society. If you feel nervous showing up to your first event, feel free to contact me through FB or university e-mail, and I’ll be happy to introduce you to everyone! I’m currently a PhD student, and my favourite games are anything Nintendo, Stardew Valley, and some Overwatch/League of Legends thrown in. If you ever want someone to play games with, or just to have a chat, feel free to message me anytime.
 - name: Jimmez
   alias: Aterfax
@@ -23,6 +25,7 @@
     steam: Aterfax
     steam64: 76561193700794003
     discord: Aterfax#0661
+  image: /assets/img/committee/jimmez.png
   blurb: Currently doing a PhD at the Uni, previously done most of the roles from tech to sec. Being the money boss for this year, so if you have ideas for how to make or spend money for the society's benefit, give me a bell. You'll see me at LANs and socials with the money box. Mainly play FPS, RTS or Star Wars / Mil themed games.
 - name: Marine
   alias: SkywardWind
@@ -31,12 +34,14 @@
     steam: SkywardWind
     steam64: 76561193817933206
     discord: SkywardWind#9684
+  image: /assets/img/committee/marine.png
   blurb: Hi, I'm Marine and I'm SLUGSoc's Social Secretary. I plan out our various events, and organise weekly socials with the console officer. If you want to do anything with the society, talk to me! I play Zelda, Overwatch, Hearthstone, and obscure point & click games. I work in marketing at an online video game retailer, and I like things to be organised and pretty.
 - name: Bobby
   alias: bobbo
   role: Publicity Officer
   id:
     discord: bobbo#9396
+  image: /assets/img/committee/bobby.png
   blurb: I’m a journalism grad working at Sheffield uni and I’m responsible for designing our promotional stuff, like LAN posters and event graphics, and looking after our social media feeds! I play all sorts, but a lot of Mario Kart, Overwatch and Hearthstone in particular.
 - name: Ashleigh
   alias: Verglas/El Gingerino
@@ -44,6 +49,7 @@
   id:
     steam: Verglas
     steam64: 76561198098279318
+  image: /assets/img/committee/ashleigh.png
   blurb: Hi, I'm Ash and I'm the Secretary for SLUGS. My job is to deal with all the correspondence for the society and all the admin stuff. I mainly play open-world adventure games (The Witcher 3 is my jam) or smaller indie games like The Binding of Isaac. I study Biochemistry and Genetics at UoS so if you need help with your biology homework or want to play some Don't Starve then send me a message!
 - name: Phil
   alias: PDeegz
@@ -51,6 +57,7 @@
     discord: PDeegz#3764
     battlenet: PDeegz#2393
   role: Esports Officer
+  image: /assets/img/committee/phil.png
   blurb: Hi, I’m Phil! As esports officer I’m responsible for handling all tasks related to esports, such as making sure competitions such as NUEL and others go smoothly, arranging ways for people to engage with esports such as viewing parties, and generally increasing awareness of what’s going on in the esports world. I play, well… mainly just Hearthstone, where I go by PDeegz, but I follow pretty much every esport to at least some degree. I’m nearly always around, so feel free to come talk to me about esports or anything else.
 - name: Simon
   alias: Kotori
@@ -62,6 +69,7 @@
     nintendo: SLUGS☆ことり
     nintendo_friend_code: SW-8581-9657-8005
     battlenet: UndyingFish#2388
+  image: /assets/img/committee/simon.png
   blurb: "Hey, Simon here. I'm one of a good few Tech Officers for SLUGS, and I'm hoping to pass on the software development knowledge I've picked up over the last few years. I'm mostly responsible for the site you're looking at right now, too, so [check out my site](https://simon.fish) or [the repo](https://github.com/slugsoc/website) to get in touch if you'd like tips! I'll be away for most of the year, but I won't let it stop me from helping out! Chances are you'll catch me at a LAN sometime. Aside from all the formalities, I mostly play Nintendo games, so if you'd like to make a friend (and proceed to lose them to a cruel game of Mario Party), you know who to call!"
 - name: Tom
   alias: Credible Threat™
@@ -70,6 +78,7 @@
     discord: Dr House#4064
     steam64: 76561198046558878
     steam: Credible Threat™
+  image: /assets/img/committee/tom.png
   blurb: Currently a 2nd year undergraduate studying Chemical Engineering. My responsibilities as assistant tech primarily include assisting the senior techs in setting up and running the LAN, gaining knowledge about SLUGs specific stuff such as the gateway and website so that I can help maintain and upgrade them. You will find me playing a wide variety of games including FPS, RTS, sandbox, Star Wars games, etc.
 - name: Rebecca
   role: Tech Officer
@@ -79,10 +88,12 @@
     steam: fudgecake34
     discord: Fudgecake34#5477
     battlenet: Fudgecake34#2508
+  image: /assets/img/committee/becca.png
   blurb: Hi, I'm Becca! Im currently a third year Computer Science with AI student. My favourite type of games are puzzle based games like Portal and Talos Principle. I'm always up for some TF2 though! As one of the tech roles I'll be mainly helping out at LANs, so hope to see you there!
 - name: Greg
   alias: Gregregorovich
   role: Senior Tech Officer
+  image: /assets/img/committee/greg.png
   id:
     discord: '"Chip" Gregregorovich#8603'
     steam: Gregregorovich
@@ -90,6 +101,7 @@
 - name: Fred
   alias: RaptureAwaits
   role: Tech Officer
+  image: /assets/img/committee/fred.png
   blurb: Hey, I'm Fred; one of four assistant techs in the SLUGSoc committee helping to make LANs run smoothly. At the time of writing, I'm a Mathematics student entering my second year at Sheffield with a love for group theory and a hatred of statistics. You can find me at LANs by looking for the tired man with glasses who hasn't stopped playing Destiny 2 since he arrived (or just find the chair with my SLUGS hoodie on the back).
   id:
     steam: RaptureAwaits
@@ -99,13 +111,16 @@
 - name: Eric
   alias: Chintam
   role: Senior Tech Officer
+  image: /assets/img/committee/eric.png
   id:
     discord: Chintam#0468
 - name: Matt
   role: Console Officer
+  image: /assets/img/committee/tom.png
   blurb: Hi, I'm Matt. I'm the SLUGS console officer. My job involves taking care of our consoles and bringing them to socials. I've been coming to SLUGS for 3 years. You can find me most days playing League of Legends, FIFA, or one of the 101 strategy games I have in my Steam library. I love meeting new people through SLUGS, so come find me if you're at one of our socials and tell me what your favourite Pokemon is (and why is it Mamoswine?).
 - name: Charlie
   role: Food Officer
+  image: /assets/img/committee/belf.png
   id:
     steam: Belf
     steam64: 76561198030000141

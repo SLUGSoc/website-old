@@ -1,10 +1,10 @@
-<div class="card bg-danger mb-3">
+<div class="card bg-light text-dark mb-3">
   <div class="card-body">
     <div class="card-title">
       <div class="pt-3">
         <div class="d-flex flex-column flex-md-row">
           <div class="d-flex flex-column text-center w-50 mx-auto">
-            <img class="w-100" src="https://placehold.it/300" alt="" />
+            <img class="w-100" src="{{ include.member.image }}" alt="" />
             <h3><small><span class="badge badge-primary"><i class="fas fa-user mr-1"></i>{{ include.member.role}}</span></small><br />{{ include.member.name }}</h3>
             <h5><i class="fas fa-tag mr-1"></i><u>{{ include.member.alias}}</u></h5>
             <h4 style="line-height: 130%;">
