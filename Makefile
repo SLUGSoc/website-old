@@ -19,6 +19,7 @@ check:
 		_site
 
 install: $(PROJECT_DEPS)
+	$(BUNDLE) config build.nokogiri --use-system-libraries
 	$(BUNDLE) install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
 	$(YARN) install
 
